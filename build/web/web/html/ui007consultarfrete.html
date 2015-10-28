@@ -1,0 +1,427 @@
+<!DOCTYPE HTML>
+<html lang="pt-br">
+<head>
+	<title>Consultar Frete | DigiMon</title>
+	<link rel="stylesheet" type="text/css" href="dist/css/estilo.css">
+	<link href='https://fonts.googleapis.com/css?family=Cantarell:400,700' rel='stylesheet' type='text/css'>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<script type="text/javascript" src="dist/js/novo.js" defer=""></script>
+</head>
+<body class="insideSystem">
+	<div id="interface">
+		<div id="header">
+			<div class="main">
+				<a href="#"><img src="dist/imagens/logoo.png" class="logo" id="logoo" alt="Logo"/></a>
+				<ul class="menu" id="menu">
+					<li><a href="#">Home</a></li>
+					<li><a href="#">Transportador<img src="dist/imagens/seta.png" class="seta" alt="Opções de transportador"/></a>
+						<ul>
+							<li><a href="#">Frete<img src="dist/imagens/setad.png" class="setad" alt="Opções de Frete"/></a>
+								<!--Criação da class submenu-->
+								<ul class="submenu">
+									<li><a href="#">Cadastrar</a></li>
+									<li><a href="#">Consultar</a></li>
+								</ul>
+							</li>
+							<li><a href="#">Veículo <img src="dist/imagens/setad.png" class="setad" alt="Opções de Veículo"/></a>
+								<ul class="submenu">
+									<li><a href="#">Cadastrar</a></li>
+									<li><a href="#">Consultar</a></li>
+									<li><a href="#">Passagem</a></li>	
+								</ul>
+							</li>
+							<li><a href="#">Motorista <img src="dist/imagens/setad.png" class="setad" alt="Opções de Motorista"/></a>
+								<ul class="submenu">
+									<li><a href="#">Cadastrar</a></li>
+									<li><a href="#">Consultar</a></li>
+								</ul>
+							</li>
+						</ul>
+					</li>
+					<li><a href="#">Órgão <img src="dist/imagens/seta.png" class="seta" alt="Opções de Órgão"/></a>
+						<ul>
+							<li><a href="#">Posto <img src="dist/imagens/setad.png" class="setad" alt="Opções de Posto"/></a>
+								<ul class="submenu">
+									<li><a href="#">Cadastrar</a></li>
+									<li><a href="#">Consultar</a></li>
+								</ul>
+							</li>
+							<li><a href="#">Rodovia <img src="dist/imagens/setad.png" class="setad" alt="Opções de Rodovia"/></a>
+								<ul class="submenu">
+									<li><a href="#">Cadastrar </a></li>
+									<li><a href="#">Consultar</a></li>
+								</ul>
+							</li>
+							<li><a href="#">Transportador <img src="dist/imagens/setad.png" class="setad" alt="Opções de Transportador"/></a>
+								<ul class="submenu">
+									<li><a href="#">Cadastrar</a></li>
+									<li><a href="#">Consultar</a></li>
+								</ul>
+							</li>
+							<li><a href="#">Câmera <img src="dist/imagens/setad.png" class="setad" alt="Opções de Câmera"/></a>
+								<ul class="submenu">
+									<li><a href="#">Cadastrar </a></li>
+									<li><a href="#">Consultar</a></li>
+								</ul>
+							</li>
+							<li><a href="#">Balança <img src="dist/imagens/setad.png" class="setad" alt="Opções de Balança"/></a>
+								<ul class="submenu">
+									<li><a href="#">Cadastrar </a></li>
+									<li><a href="#">Consultar</a></li>
+								</ul>
+							</li>
+						</ul>
+					</li>
+					<li><a href="#">Posto de Pesagem <img src="dist/imagens/seta.png" class="seta" alt="Opções de Pesagem"/></a>
+						<ul>
+							<li><a href="#">Pesagem <img src="dist/imagens/setad.png" class="setad" alt="Opções de Pesagem"/></a>
+								<ul class="submenu">
+									<li><a href="#">Cadastrar </a></li>
+									<li><a href="#">Consultar</a></li>
+								</ul>
+							</li>
+						</ul>
+					</li> 
+					<li><a href="#">Relatório <img src="dist/imagens/seta.png" class="seta" alt="Opções de Relatório"/></a>
+						<ul>
+							<li><a href="#">Emitir</a></li>
+						</ul>
+					</li>
+					<li><a href="#">Usuário<img src="dist/imagens/seta.png" class="seta" alt="Opções de Usuário"/></a>
+						<ul>
+							<li><a href="#">Cadastrar</a></li>
+							<li><a href="#">Consultar</a></li>
+						</ul>
+					</li>
+					<li><a href="#">Ajuda<img src="dist/imagens/seta.png" class="seta" alt="Opções de Ajuda"/></a>
+						<ul>
+							<li><a href="#">Fale Conosco</a></li>
+							<li><a href="#">FAQ</a></li>
+						</ul>
+					</li>
+				<!--Aqui tem uma ul diferente-->
+					<li><img src="dist/imagens/iconeMenu.png" class="iconeMenu" alt="Menu do Usuário"/>
+						<ul id="last">
+							<li><a href="#">Minha Conta</a></li>
+							<li><a href="#">Sair</a></li>
+						</ul>
+				<!--aqui termina a ul do botao sair e minha conta-->
+					</li>
+				</ul>
+			</div>
+			<div id="darkBox"></div>
+		</div><!-- Fim da div header -->
+		
+		<div id="main">
+			<div class="centro">
+			
+					<!-- =======================NÃO EDITE ACIMA ====================-->
+			
+				<h1>Consultar de Frete</h1>
+				<form action="#" method="post" id="formularioJ">
+					<fieldset>
+					<legend>Dados do Frete</legend>
+						<div class="campo">
+							<label for="idFreteJ">ID de Frete</label><br> 
+							<input type="text" name="idFreteJ" id="idFreteJ"  disabled class="campoObrig"><span id="x_idFreteJ"  class="tSpan"></span>
+						</div>
+					</fieldset>
+					
+					<fieldset>		
+						<legend>Dados do Transportador</legend>
+						<div class="campo">
+							<label for="transportadorJ">Transportador</label><br> 
+							<input type="text" name="transportador" id="transportadorJ"  class="campoObrig"><span id="x_transportadorJ"  class="tSpan"></span>
+						</div>
+						<div class="campo"> 
+							<label for="MotoristaJ">Motorista</label><br> 
+							<select id="MotoristaJ">
+								<option value="José">José</option>
+								<option value="Jeremias">Jeremias</option>
+								<option value="João">João</option>
+								<option value="Jacó">Jacó</option>
+							</select>
+						</div>
+						<div class="campo"> 
+							<label for="veiculoJ">Veículo</label><br> 
+							<input type="text" name="veiculo" id="veiculoJ" maxlength="14" size="14" class="campoObrig"><span id="x_veiculoJ" class="tSpan"></span>
+						</div>
+						<div class="campo"> 
+							<label for="dataJ">Data</label><br> 
+							<input type="text" name="data" id="dataJ" maxlength="10" size="11"  class="campoObrig"><span id="x_dataJ" class="tSpan"></span>
+						</div>
+					</fieldset>
+					
+					<fieldset>
+						<legend>Tipo de Frete</legend>
+						<input type="radio" id="domesticoJ" name="ti" value="domestico" checked><label for="domesticoJ">Doméstico</label>
+						<input type="radio" id="empresarialJ" name="ti" value="empresarial"><label for="empresarialJ">Empresarial</label>
+					</fieldset>
+					<fieldset>
+						<legend>Carga - Remetente</legend>
+						<div class="campo"> 
+							<label for="rgJ">RG</label><br> 
+							<input type="text" name="rg" id="rgJ" size="18" maxlength="14" class="campoObrig"><span id="x_rgJ" class="tSpan"></span>
+						</div>
+						<div class="campo"> 
+							<label for="ufJ">UF</label><br> 
+							<select id="ufJ" name="uf"> 
+								<option value="AC">AC</option> 
+								<option value="AL">AL</option> 
+								<option value="AM">AM</option> 
+								<option value="AP">AP</option> 
+								<option value="BA">BA</option> 
+								<option value="CE">CE</option> 
+								<option value="DF">DF</option> 
+								<option value="ES">ES</option> 
+								<option value="GO">GO</option> 
+								<option value="MA">MA</option> 
+								<option value="MT">MT</option> 
+								<option value="MS">MS</option> 
+								<option value="MG">MG</option> 
+								<option value="PA">PA</option> 
+								<option value="PB">PB</option> 
+								<option value="PR">PR</option> 
+								<option value="PE">PE</option> 
+								<option value="PI">PI</option> 
+								<option value="RJ" selected>RJ</option> 
+								<option value="RN">RN</option> 
+								<option value="RO">RO</option> 
+								<option value="RS">RS</option> 
+								<option value="RR">RR</option> 
+								<option value="SC">SC</option> 
+								<option value="SE">SE</option> 
+								<option value="SP">SP</option> 
+								<option value="TO">TO</option>
+							</select><span id="x_ufJ" class="tSpan"></span>
+						</div>
+						<div class="campo"> 
+							<label for="orgaoEmissorJ">Orgão Emissor</label><br> 
+							<input type="text" name="orgaoEmissor" id="orgaoEmissorJ"  size="19" maxlength="14" class="campoObrig iLetras"><span id="x_orgaoEmissorJ" class="tSpan"></span>
+						</div><div class="campo"> 
+							<label for="nomeJ">Nome</label><br> 
+							<input type="text" name="nome" id="nomeJ" class="campoObrig iLetras"  size="47" maxlength="60"><span id="x_nomeJ" class="tSpan"></span>
+						</div>
+						<div class="campo"> 
+							<label for="cpfJ">CPF</label><br> 
+							<input type="text" name="cpf" id="cpfJ"  class="campoObrig" size="18" maxlength="14"><span id="x_cpfJ" class="tSpan"></span>
+						</div>
+						<div class="campo"> 
+							<label for="dataR">Data Nascimento</label><br> 
+							<input type="text" name="data" id="dataR" size="14"  maxlength="10" class="campoObrig data"><span id="x_dataR" class="tSpan"></span>
+						</div>
+					</fieldset>
+					
+					<fieldset>
+						<legend>Carga - Destinatário</legend>
+						<div class="campo"> 
+							<label for="rgJD">RG</label><br> 
+							<input type="text" name="rgD" id="rgJD" size="18" maxlength="14" class="campoObrig"><span id="x_rgJD" class="tSpan"></span>
+						</div>
+						<div class="campo"> 
+							<label for="ufJD">UF</label><br> 
+							<select id="ufJD" name="ufD"> 
+								<option value="AC">AC</option> 
+								<option value="AL">AL</option> 
+								<option value="AM">AM</option> 
+								<option value="AP">AP</option> 
+								<option value="BA">BA</option> 
+								<option value="CE">CE</option> 
+								<option value="DF">DF</option> 
+								<option value="ES">ES</option> 
+								<option value="GO">GO</option> 
+								<option value="MA">MA</option> 
+								<option value="MT">MT</option> 
+								<option value="MS">MS</option> 
+								<option value="MG">MG</option> 
+								<option value="PA">PA</option> 
+								<option value="PB">PB</option> 
+								<option value="PR">PR</option> 
+								<option value="PE">PE</option> 
+								<option value="PI">PI</option> 
+								<option value="RJ" selected>RJ</option> 
+								<option value="RN">RN</option> 
+								<option value="RO">RO</option> 
+								<option value="RS">RS</option> 
+								<option value="RR">RR</option> 
+								<option value="SC">SC</option> 
+								<option value="SE">SE</option> 
+								<option value="SP">SP</option> 
+								<option value="TO">TO</option>
+							</select><span id="x_ufJD" class="tSpan"></span>
+						</div>
+						<div class="campo"> 
+							<label for="orgaoEmissorJD">Orgão Emissor</label><br> 
+							<input type="text" name="orgaoEmissorD" id="orgaoEmissorJD"  size="19" maxlength="14" class="campoObrig iLetras"><span id="x_orgaoEmissorJD" class="tSpan"></span>
+						</div><div class="campo"> 
+							<label for="nomeJD">Nome</label><br> 
+							<input type="text" name="nomeD" id="nomeJD" class="campoObrig iLetras"  size="47" maxlength="60"><span id="x_nomeJD" class="tSpan"></span>
+						</div>
+						<div class="campo"> 
+							<label for="cpfJD">CPF</label><br> 
+							<input type="text" name="cpfD" id="cpfJD"  class="campoObrig" size="18" maxlength="14"><span id="x_cpfJD" class="tSpan"></span>
+						</div>
+						<div class="campo"> 
+							<label for="dataJD">Data Nascimento</label><br> 
+							<input type="text" name="dataD" id="dataJD" size="14"  maxlength="10" class="campoObrig data"><span id="x_dataJD" class="tSpan"></span>
+						</div>
+					</fieldset>
+					
+					<fieldset>
+						<legend>Carga - Origem</legend>
+						<div class="campo"> 
+							<label for="cepJ">CEP</label><br> 
+							<input type="text" name="cep" id="cepJ" size="10" maxlength="10" class="campoObrig"><span id="x_cepJ" class="tSpan"></span>
+						</div>
+						<div class="campo"> 
+							<label for="logradouroJ">Logradouro</label><br> 
+							<input type="text" name="logradouro" id="logradouroJ" size="28" maxlength="40" class="campoObrig iLetras"><span id="x_logradouroJ" class="tSpan"></span>
+						</div>
+						<div class="campo"> 
+							<label for="numeroJ">Número</label><br> 
+							<input type="text" name="numero" id="numeroJ" size="4" maxlength="10" class="campoObrig"><span id="x_numeroJ" class="tSpan"></span>
+						</div>
+						<div class="campo"> 
+							<label for="complementoJ">Complemento</label><br> 
+							<input type="text" name="complemento" id="complementoJ" size="11" maxlength="14"  class="campoObrig"><span id="x_complementoJ" class="tSpan"></span>
+						</div>
+						<div class="campo"> 
+							<label for="bairroJ">Bairro</label><br> 
+							<input type="text" name="bairro" id="bairroJ" size="18" maxlength="40" class="campoObrig"><span id="x_bairroJ" class="tSpan"></span>
+						</div>
+						<div class="campo"> 
+							<label for="cidadeJ">Cidade</label><br> 
+							<input type="text" name="cidade" id="cidadeJ" size="19" maxlength="40" class="campoObrig iLetras"><span id="x_cidadeJ" class="tSpan"></span>
+						</div>
+						<div class="campo"> 
+							<label for="ufJO">UF</label><br> 
+							<select id="ufJO" name="uf"> 
+								<option value="AC">AC</option> 
+								<option value="AL">AL</option> 
+								<option value="AM">AM</option> 
+								<option value="AP">AP</option> 
+								<option value="BA">BA</option> 
+								<option value="CE">CE</option> 
+								<option value="DF">DF</option> 
+								<option value="ES">ES</option> 
+								<option value="GO">GO</option> 
+								<option value="MA">MA</option> 
+								<option value="MT">MT</option> 
+								<option value="MS">MS</option> 
+								<option value="MG">MG</option> 
+								<option value="PA">PA</option> 
+								<option value="PB">PB</option> 
+								<option value="PR">PR</option> 
+								<option value="PE">PE</option> 
+								<option value="PI">PI</option> 
+								<option value="RJ" selected>RJ</option> 
+								<option value="RN">RN</option> 
+								<option value="RO">RO</option> 
+								<option value="RS">RS</option> 
+								<option value="RR">RR</option> 
+								<option value="SC">SC</option> 
+								<option value="SE">SE</option> 
+								<option value="SP">SP</option> 
+								<option value="TO">TO</option>
+
+							</select><span id="x_ufJO" class="tSpan"></span>
+						</div>
+					</fieldset>
+					<fieldset>
+						<legend>Carga - Destino</legend>
+						<div class="campo"> 
+							<label for="cepJD">CEP</label><br> 
+							<input type="text" name="cepD" id="cepJD" size="10" maxlength="10"  class="campoObrig"><span id="x_cepJD" class="tSpan"></span>
+						</div>
+						<div class="campo"> 
+							<label for="logradouroJD">Logradouro</label><br> 
+							<input type="text" name="logradouroD" id="logradouroJD" size="28" maxlength="40" class="campoObrig iLetras" ><span id="x_logradouroJD" class="tSpan"></span>
+						</div>
+						<div class="campo"> 
+							<label for="numeroJD">Número</label><br> 
+							<input type="text" name="numeroD" id="numeroJD" size="4" maxlength="10" class="campoObrig"><span id="x_numeroJD" class="tSpan"></span>
+						</div>
+						<div class="campo"> 
+							<label for="complementoJD">Complemento</label><br> 
+							<input type="text" name="complementoD" id="complementoJD" size="11" maxlength="14" class=""><span id="x_complementoJD" class="tSpan"></span>
+						</div>
+						<div class="campo"> 
+							<label for="bairroJD">Bairro</label><br> 
+							<input type="text" name="bairroD" id="bairroJD" size="18" maxlength="40" class="campoObrig"><span id="x_bairroJD" class="tSpan"></span>
+						</div>
+						<div class="campo"> 
+							<label for="cidadeJD">Cidade</label><br> 
+							<input type="text" name="cidadeD" id="cidadeJD" size="19" maxlength="40" class="campoObrig iLetras"><span id="x_cidadeJD" class="tSpan"></span>
+						</div>
+						<div class="campo"> 
+							<label for="ufJDT">UF</label><br> 
+							<select id="ufJDT" name="D"> 
+								<option value="AC">AC</option> 
+								<option value="AL">AL</option> 
+								<option value="AM">AM</option> 
+								<option value="AP">AP</option> 
+								<option value="BA">BA</option> 
+								<option value="CE">CE</option> 
+								<option value="DF">DF</option> 
+								<option value="ES">ES</option> 
+								<option value="GO">GO</option> 
+								<option value="MA">MA</option> 
+								<option value="MT">MT</option> 
+								<option value="MS">MS</option> 
+								<option value="MG">MG</option> 
+								<option value="PA">PA</option> 
+								<option value="PB">PB</option> 
+								<option value="PR">PR</option> 
+								<option value="PE">PE</option> 
+								<option value="PI">PI</option> 
+								<option value="RJ" selected>RJ</option> 
+								<option value="RN">RN</option> 
+								<option value="RO">RO</option> 
+								<option value="RS">RS</option> 
+								<option value="RR">RR</option> 
+								<option value="SC">SC</option> 
+								<option value="SE">SE</option> 
+								<option value="SP">SP</option> 
+								<option value="TO">TO</option>
+
+							</select><span id="x_ufJDT" class="tSpan"></span>
+						</div>
+					</fieldset>
+					
+					<fieldset>
+						<legend>Carga - Produto</legend>
+						<div class="campo"> 
+							<label for="mercadoriaJ">Mercadoria:</label><br> 
+							<input type="text" name="mercadoria" id="mercadoriaJ" class="campoObrig"><span id="x_mercadoriaJ" class="tSpan"></span>
+						</div>
+						<div class="campo"> 
+							<label for="pesoTotalJ">Peso Total:</label><br> 
+							<input type="text" name="pesoTotal" id="pesoTotalJ" class="campoObrig"><span id="x_pesoTotalJ" class="tSpan"></span>
+						</div>
+						
+						<div class="campo"> 
+							<label for="valorTotalJ">Valor Total:</label><br> 
+							<input type="text" name="valorTotal" id="valorTotalJ" class="campoObrig"><span id="x_valorTotalJ" class="tSpan"></span>
+						</div>
+					</fieldset>
+					<div class="botoes" id="botoes">
+						<input type="reset" value="CANCELAR" name="Limpar" id="limparJ" class="botaoJ">
+						<input type="submit" value="ALTERAR" name="enviar" id="enviarJ" class="botaoJ">
+					</div><!--Fim div botoes-->
+				</form>
+				
+				<!-- ===== NÃO EDITE A PARTIR DAQUI =========================================-->
+				
+				</div><!--Fim div centro-->		
+				<div id="clear"></div><!--Fim div clear-->
+			</div><!--Fim div main conteúdo-->	
+		<div id="rodape">
+			<div class="main">
+				<div id="footer">
+					&copy 2015 - Projeto Digimon | Forsoft Rio
+				</div><!--Fim div Footer-->
+			</div><!--Fim div main do rodape-->
+		</div><!--Fim div "rodape"-->
+	</div><!--Fim div Interface-->
+</body>
+</html>
