@@ -6,50 +6,28 @@
 
 package br.com.projetodigimon.model;
 
+
 /**
  *
- * @author Javapos
+ * @author Luiz
  */
 public class Pesagem {
-    private long idPesagem;
-    private String dataHora;
+    
+    private int idPesagem;
+    private PostoPesagem postoPesagem;
+    private Veiculo veiculo;    
     private float pbt;
     private float pesoEixo;
-    private PostoPesagem postoPesagem;
-    private Veiculo veiculo;
-    private char transbordo;
-    private char remanejamento;
+    private String dataHora;
+    private String transbordo;
+    private String remanejamento;
 
-    public long getIdPesagem() {
+    public int getIdPesagem() {
         return idPesagem;
     }
 
-    public void setIdPesagem(long idPesagem) {
+    public void setIdPesagem(int idPesagem) {
         this.idPesagem = idPesagem;
-    }
-
-    public String getDataHora() {
-        return dataHora;
-    }
-
-    public void setDataHora(String dataHora) {
-        this.dataHora = dataHora;
-    }
-
-    public float getPbt() {
-        return pbt;
-    }
-
-    public void setPbt(float pbt) {
-        this.pbt = pbt;
-    }
-
-    public float getPesoEixo() {
-        return pesoEixo;
-    }
-
-    public void setPesoEixo(float pesoEixo) {
-        this.pesoEixo = pesoEixo;
     }
 
     public PostoPesagem getPostoPesagem() {
@@ -68,20 +46,47 @@ public class Pesagem {
         this.veiculo = veiculo;
     }
 
-    public char getTransbordo() {
+    public float getPbt() {
+        return pbt;
+    }
+
+    public void setPbt(float pbt) {
+        this.pbt = pbt;
+    }
+
+    public float getPesoEixo() {
+        return pesoEixo;
+    }
+
+    public void setPesoEixo(float pesoEixo) {
+        this.pesoEixo = pesoEixo;
+    }
+
+    public String getDataHora() {
+        return dataHora;
+    }
+
+    public void setDataHora(String dataHora) {
+        this.dataHora = dataHora;
+    }
+
+    public String getTransbordo() {
         return transbordo;
     }
 
-    public void setTransbordo(char transbordo) {
+    public void setTransbordo(String transbordo) {
         this.transbordo = transbordo;
     }
 
-    public char getRemanejamento() {
+    public String getRemanejamento() {
         return remanejamento;
     }
 
-    public void setRemanejamento(char remanejamento) {
+    public void setRemanejamento(String remanejamento) {
         this.remanejamento = remanejamento;
     }
-        
+
+    
+
+    
 }

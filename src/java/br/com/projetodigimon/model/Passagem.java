@@ -11,17 +11,16 @@ package br.com.projetodigimon.model;
  * @author Javapos
  */
 public class Passagem {
-    private long idPassagem;
+    private int idPassagem;
     private Camera camera;
     private Veiculo veiculo;
     private String dataHora;
-    private float pesoPorEixo;
 
-    public long getIdPassagem() {
+    public int getIdPassagem() {
         return idPassagem;
     }
 
-    public void setIdPassagem(long idPassagem) {
+    public void setIdPassagem(int idPassagem) {
         this.idPassagem = idPassagem;
     }
 

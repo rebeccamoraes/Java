@@ -3,29 +3,46 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-
 package br.com.projetodigimon.model;
 
 /**
  *
- * @author Javapos
+ * @author EliasL
  */
 public class Camera {
-    private long idCamera;
+
+    private int idCamera;
+    private Rodovia rodovia;
+    private String numSerie;
     private String fabricante;
     private String modelo;
-    private String numSerie;
-    private float latitude;
-    private float longitude;
-    private Rodovia rodovia;
+    private Float latitude;
+    private Float longitude;
     private int km;
+    private String situacao;
 
-    public long getIdCamera() {
+    public int getIdCamera() {
         return idCamera;
     }
 
-    public void setIdCamera(long idCamera) {
+    public void setIdCamera(int idCamera) {
         this.idCamera = idCamera;
+    }
+
+    public Rodovia getRodovia() {
+        return rodovia;
+    }
+
+    public void setRodovia(Rodovia rodovia) {
+        this.rodovia = rodovia;
+    }
+
+    public String getNumSerie() {
+        return numSerie;
+    }
+
+    public void setNumSerie(String numSerie) {
+        this.numSerie = numSerie;
     }
 
     public String getFabricante() {
@@ -44,43 +61,38 @@ public class Camera {
         this.modelo = modelo;
     }
 
-    public String getNumSerie() {
-        return numSerie;
-    }
-
-    public void setNumSerie(String numSerie) {
-        this.numSerie = numSerie;
-    }
-
-    public float getLatitude() {
-        return latitude;
-    }
-
-    public void setLatitude(float latitude) {
-        this.latitude = latitude;
-    }
-
-    public float getLongitude() {
-        return longitude;
-    }
-
-    public void setLongitude(float longitude) {
-        this.longitude = longitude;
-    }
-
-    public Rodovia getRodovia() {
-        return rodovia;
-    }
-
-    public void setRodovia(Rodovia rodovia) {
-        this.rodovia = rodovia;
-    }
-
     public int getKm() {
         return km;
     }
 
     public void setKm(int km) {
         this.km = km;
-    }   
+    }
+
+    public String getSituacao() {
+        return situacao;
+    }
+
+    public void setSituacao(String situacao) {
+        this.situacao = situacao;
+    }
+
+    public Float getLatitude() {
+        return latitude;
+    }
+
+    public void setLatitude(Float latitude) {
+        this.latitude = latitude;
+    }
+
+    public Float getLongitude() {
+        return longitude;
+    }
+
+    public void setLongitude(Float longitude) {
+        this.longitude = longitude;
+    }
+
+  
+    
 }

@@ -1,11 +1,18 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+
 package br.com.projetodigimon.controller;
 
-import br.com.projetodigimon.model.Pesagem;
-import br.com.projetodigimon.model.PostoPesagem;
-import br.com.projetodigimon.model.Veiculo;
-
+import br.com.projetodigimon.dao.DaoCamera;
+import br.com.projetodigimon.model.Camera;
+import br.com.projetodigimon.model.Rodovia;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -14,59 +21,72 @@ import javax.servlet.http.HttpServletResponse;
 
 /**
  *
- * @author lucas
- * @review and correction Alan Lones
- * 
+ * @author EliasL
  */
-@WebServlet(name = "ServletUI026", urlPatterns = {"/ServletUI026"})
+@WebServlet(name = "ServletUI026", urlPatterns = {"/web/ServletUI026"})
 public class ServletUI026 extends HttpServlet {
 
-    
+    /**
+     * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
+     * methods.
+     *
+     * @param request servlet request
+     * @param response servlet response
+     * @throws ServletException if a servlet-specific error occurs
+     * @throws IOException if an I/O error occurs
+     */
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
         PrintWriter out = response.getWriter();
-   
-        Pesagem pesagem = new Pesagem ();
-        Veiculo v = new Veiculo();
-        pesagem.setVeiculo(v);
-        PostoPesagem p = new PostoPesagem();
-        pesagem.setPostoPesagem(p);
-               
+
+        Camera camera = new Camera();
+    //    Passagem passagem = new Passagem();
+        Rodovia rodovia = new Rodovia();
         
-        String datahora = request.getParameter("datahora");
-        pesagem.setDataHora(datahora);
+        /** Ver nescessidade desse método
+        String idCamera = request.getParameter(idCamera)
+        **/
+        //String idRodovia = request.getParameter("idRodovia");
+        String numSerie = request.getParameter("numserie");
+        String fabricante = request.getParameter("fabricante");
+        String modelo = request.getParameter("modelo");
+        String latitude = request.getParameter("latitude");
+        String longitude = request.getParameter("longitude");
+        String km = request.getParameter("km");
         
-        String pbt =request.getParameter("pbt");
-        pesagem.setPbt(Float.parseFloat(pbt));
+        /* Verificar Nescessidade 
+        String situacao = request.getParameter("situacao");
+        */
         
-        String pesoeixo = request.getParameter("pesoeixo");
-        pesagem.setPesoEixo(Float.parseFloat(pesoeixo));
+        //rodovia.setIdRodovia(Integer.parseInt("idRodovia"));
+        camera.setNumSerie(numSerie);
+        camera.setFabricante(fabricante);
+        camera.setModelo(modelo);
+        camera.setLatitude(Float.parseFloat(latitude));
+        camera.setLongitude(Float.parseFloat(longitude));
+        camera.setKm(Integer.parseInt(km));
         
-        String idposto = request.getParameter("idposto");
-        pesagem.getPostoPesagem().setIdPosto(Long.parseLong(idposto));
         
-        String idveiculo = request.getParameter("idveiculo");
-        pesagem.getVeiculo().setIdVeiculo(Long.parseLong(idveiculo));
+        DaoCamera dc = new DaoCamera();
         
-        char transbordo =  request.getParameter("transbordo").charAt(0);
-        pesagem.setTransbordo(transbordo);
-        
-        char remanejamento = request.getParameter("remanejamento").charAt(0);
-        pesagem.setRemanejamento(remanejamento);
-        
+        try {
+            System.out.println("entrou no try");
+            dc.inserir(camera);
+        } catch (ClassNotFoundException ex) {
+            Logger.getLogger(ServletUI026.class.getName()).log(Level.SEVERE, null, ex);
+        }
         
         out.println("<html><body>");
-        out.println("Data: "+pesagem.getDataHora()+"<br>");
-        out.println("PBT: "+pesagem.getPbt()+"<br>");
-        out.println("Peso por Eixo: "+pesagem.getPesoEixo()+"<br>");
-        out.println("ID do Posto: "+pesagem.getPostoPesagem().getIdPosto()+"<br>");
-        out.println("ID do Veiculo: "+pesagem.getVeiculo().getIdVeiculo()+"<br>");
-        out.println("Houve Transbordo ?: "+pesagem.getTransbordo()+"<br>");
-        out.println("Houve Remanejamento ?: "+pesagem.getRemanejamento()+"<br>");
+        out.println("Id Rodovia: "+rodovia.getIdRodovia()+"<br>");
+        out.println("Numero de Série: "+camera.getNumSerie()+"<br>");
+        out.println("Fabricante : "+camera.getFabricante()+"<br>");
+        out.println("Modelo : "+camera.getModelo()+"<br>");
+        out.println("Latitude : "+camera.getLatitude()+"<br>");
+        out.println("Longitude : "+camera.getLongitude()+"<br>");
+        out.println("Km : "+camera.getKm()+"<br>");
         out.println("</body></html>");
-        
-       
+    
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">

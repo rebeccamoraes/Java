@@ -11,19 +11,18 @@ package br.com.projetodigimon.model;
  * @author Javapos
  */
 public class Carga {
-    private long idCarga;
+    private int idCarga;
     private String tipo;
+    private Frete frete;
     private Endereco origem;
     private Endereco destino;
     private String remetente;
-    private String destinatario;
-    private Frete frete;
 
-    public long getIdCarga() {
+    public int getIdCarga() {
         return idCarga;
     }
 
-    public void setIdCarga(long idCarga) {
+    public void setIdCarga(int idCarga) {
         this.idCarga = idCarga;
     }
 
@@ -33,6 +32,14 @@ public class Carga {
 
     public void setTipo(String tipo) {
         this.tipo = tipo;
+    }
+
+    public Frete getFrete() {
+        return frete;
+    }
+
+    public void setFrete(Frete frete) {
+        this.frete = frete;
     }
 
     public Endereco getOrigem() {
@@ -67,13 +74,14 @@ public class Carga {
         this.destinatario = destinatario;
     }
 
-    public Frete getFrete() {
-        return frete;
+    public char getSituacao() {
+        return situacao;
     }
 
-    public void setFrete(Frete frete) {
-        this.frete = frete;
+    public void setSituacao(char situacao) {
+        this.situacao = situacao;
     }
-    
-    
+    private String destinatario;
+    private char situacao;
+
 }

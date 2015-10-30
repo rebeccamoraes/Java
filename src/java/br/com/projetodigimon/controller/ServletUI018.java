@@ -3,10 +3,11 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
+
 package br.com.projetodigimon.controller;
 
-import br.com.projetodigimon.model.Balanca;
-
+import br.com.projetodigimon.dao.DaoPosto;
+import br.com.projetodigimon.model.PostoPesagem;
 import java.io.IOException;
 import java.io.PrintWriter;
 import javax.servlet.ServletException;
@@ -17,32 +18,44 @@ import javax.servlet.http.HttpServletResponse;
 
 /**
  *
- * @author Brito
- * @review and correction Alan Lones
- * 
+ * @author Diguinho
  */
-@WebServlet(name = "ServletUI018", urlPatterns = {"/ServletUI018"})
+@WebServlet(name = "ServletUI018", urlPatterns = {"/web/ServletUI018"})
 public class ServletUI018 extends HttpServlet {
 
+    /**
+     * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
+     * methods.
+     *
+     * @param request servlet request
+     * @param response servlet response
+     * @throws ServletException if a servlet-specific error occurs
+     * @throws IOException if an I/O error occurs
+     */
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
+        response.setContentType("text/html;charset=UTF-8");
         PrintWriter out = response.getWriter();
-        Balanca balanca = new Balanca();
+       PostoPesagem pp = new PostoPesagem();
         
-        String numSerie = request.getParameter("numSerie");
-        String fabricante = request.getParameter("fabricante");
-        String modelo = request.getParameter("modelo");
-        String idposto = request.getParameter("idposto");
-
-        balanca.setNumSerie(numSerie);
-        balanca.setFabricante(fabricante);
-        balanca.setModelo(modelo);
-
-        out.println("<html><body>");
-        out.println("Numero de Serie: "+balanca.getNumSerie()+"<br>");
-        out.println("Fabricante: "+balanca.getFabricante()+"<br>");
-        out.println("Modelo: "+balanca.getModelo()+"<br>");
-        out.println("</body></html>");
+        try {
+        pp.setKm(Integer.parseInt(request.getParameter("km")));
+        pp.setLatitude(request.getParameter("latitude"));
+        pp.setLongitude(request.getParameter("longitude"));
+        
+        DaoPosto dp = new DaoPosto();
+        dp.inserir(pp);
+        } catch (ClassNotFoundException e) {
+        } catch (NumberFormatException e) {
+        }
+        
+        
+        
+       
+        out.println("Km: "+ pp.getKm() +"<br>");
+        out.println("Latitude: "+ pp.getLatitude() +"<br>");
+        out.println("Longitude: "+ pp.getLongitude() +"<br>");
+        
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">

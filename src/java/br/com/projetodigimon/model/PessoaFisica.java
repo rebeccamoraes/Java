@@ -1,29 +1,47 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-
 package br.com.projetodigimon.model;
 
-/**
- *
- * @author Javapos
- */
 public class PessoaFisica {
-    private long idPessoaFisica;
+
+    private int idPessoaFisica;
     private String nome;
     private String cpf;
     private String dataNascimento;
     private String rg;
     private String orgaoEmissor;
     private String uf;
+    private Contato contato;
+    private Endereco endereco;
+    private String sexo;
 
-    public long getIdPessoaFisica() {
+    public String getSexo() {
+        return sexo;
+    }
+
+    public void setSexo(String sexo) {
+        this.sexo = sexo;
+    }
+
+    public Contato getContato() {
+        return contato;
+    }
+
+    public void setContato(Contato contato) {
+        this.contato = contato;
+    }
+
+    public Endereco getEndereco() {
+        return endereco;
+    }
+
+    public void setEndereco(Endereco endereco) {
+        this.endereco = endereco;
+    }
+
+    public int getIdPessoaFisica() {
         return idPessoaFisica;
     }
 
-    public void setIdPessoaFisica(long idPessoaFisica) {
+    public void setIdPessoaFisica(int idPessoaFisica) {
         this.idPessoaFisica = idPessoaFisica;
     }
 
@@ -74,6 +92,5 @@ public class PessoaFisica {
     public void setUf(String uf) {
         this.uf = uf;
     }
-    
-    
+
 }

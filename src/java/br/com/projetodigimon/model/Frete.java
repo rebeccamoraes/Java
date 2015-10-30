@@ -1,27 +1,21 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 
 package br.com.projetodigimon.model;
 
-/**
- *
- * @author Javapos
- */
+
 public class Frete {
-    private long idFrete;
+    private int idFrete;
     private Motorista motorista;
     private Transportador transportador;
     private Veiculo veiculo;
-    private char tipo;
+    private String tipo;
+    private String situacao;
 
-    public long getIdFrete() {
+    public int getIdFrete() {
         return idFrete;
     }
 
-    public void setIdFrete(long idFrete) {
+    public void setIdFrete(int idFrete) {
         this.idFrete = idFrete;
     }
 
@@ -49,13 +43,19 @@ public class Frete {
         this.veiculo = veiculo;
     }
 
-    public char getTipo() {
+    public String getTipo() {
         return tipo;
     }
 
-    public void setTipo(char tipo) {
+    public void setTipo(String tipo) {
         this.tipo = tipo;
     }
-    
-    
+
+    public String getSituacao() {
+        return situacao;
+    }
+
+    public void setSituacao(String situacao) {
+        this.situacao = situacao;
+    }
 }

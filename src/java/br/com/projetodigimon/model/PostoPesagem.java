@@ -11,24 +11,40 @@ package br.com.projetodigimon.model;
  * @author Javapos
  */
 public class PostoPesagem {
-    private long idPosto;
-    private Endereco endereco;
+    private int idPosto;
+    private int km;
+    private String latitude;
+    private String longitude;
 
-    public long getIdPosto() {
+    public int getKm() {
+        return km;
+    }
+
+    public void setKm(int km) {
+        this.km = km;
+    }
+
+    public String getLatitude() {
+        return latitude;
+    }
+
+    public void setLatitude(String latitude) {
+        this.latitude = latitude;
+    }
+
+    public String getLongitude() {
+        return longitude;
+    }
+
+    public void setLongitude(String longitude) {
+        this.longitude = longitude;
+    }
+
+    public int getIdPosto() {
         return idPosto;
     }
 
-    public void setIdPosto(long idPosto) {
+    public void setIdPosto(int idPosto) {
         this.idPosto = idPosto;
     }
-
-    public Endereco getEndereco() {
-        return endereco;
-    }
-
-    public void setEndereco(Endereco endereco) {
-        this.endereco = endereco;
-    }
-    
-    
 }

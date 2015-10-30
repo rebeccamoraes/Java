@@ -8,19 +8,19 @@ package br.com.projetodigimon.model;
 
 /**
  *
- * @author Javapos
+ * @author erico_000
  */
 public class Contato {
-    private long idContato;
+    private int idContato;
     private String telefone;
     private String celular;
     private String email;
 
-    public long getIdContato() {
+    public int getIdContato() {
         return idContato;
     }
 
-    public void setIdContato(long idContato) {
+    public void setIdContato(int idContato) {
         this.idContato = idContato;
     }
 
@@ -47,6 +47,7 @@ public class Contato {
     public void setEmail(String email) {
         this.email = email;
     }
+    
     
     
 }

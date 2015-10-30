@@ -1,0 +1,273 @@
+<!DOCTYPE HTML>
+<html lang="pt-br">
+<head>
+	<title>Consultar Motorista | DigiMon</title>
+	<link rel="stylesheet" type="text/css" href="dist/css/estilo.css">
+	<link href='https://fonts.googleapis.com/css?family=Cantarell:400,700' rel='stylesheet' type='text/css'>
+	<link rel="icon" type="image/png" sizes="32x32" href="dist/imagens/favicon-32x32.png">
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<script type="text/javascript" src="dist/js/novo.js" defer=""></script>
+</head>
+<body>
+	<div id="interface">
+		<div id="header">
+			<div class="main">
+				<a href="#"><img src="dist/imagens/logoo.png" class="logo" id="logoo" alt="Logo"/></a>
+				<ul class="menu" id="menu">
+					<li><a href="#">Home</a></li>
+					<li><a href="#">Transportador<img src="dist/imagens/seta.png" class="seta" alt="Opções de transportador"/></a>
+						<ul>
+							<li><a href="#">Frete<img src="dist/imagens/setad.png" class="setad" alt="Opções de Frete"/></a>
+								<!--Criação da class submenu-->
+								<ul class="submenu">
+									<li><a href="#">Cadastrar</a></li>
+									<li><a href="#">Consultar</a></li>
+								</ul>
+							</li>
+							<li><a href="#">Veículo <img src="dist/imagens/setad.png" class="setad" alt="Opções de Veículo"/></a>
+								<ul class="submenu">
+									<li><a href="#">Cadastrar</a></li>
+									<li><a href="#">Consultar</a></li>
+								</ul>
+							</li>
+							<li><a href="#">Motorista <img src="dist/imagens/setad.png" class="setad" alt="Opções de Motorista"/></a>
+								<ul class="submenu">
+									<li><a href="#">Cadastrar</a></li>
+									<li><a href="#">Consultar</a></li>
+								</ul>
+							</li>
+						</ul>
+					</li>
+					<li><a href="#">Antt / Dnit <img src="dist/imagens/seta.png" class="seta" alt="Opções de Órgão"/></a>
+						<ul>
+							<li><a href="#">Posto de Pesagem<img src="dist/imagens/setad.png" class="setad" alt="Opções de Posto"/></a>
+								<ul class="submenu">
+									<li><a href="#">Cadastrar</a></li>
+									<li><a href="#">Consultar</a></li>
+								</ul>
+							</li>
+							<li><a href="#">Rodovia <img src="dist/imagens/setad.png" class="setad" alt="Opções de Rodovia"/></a>
+								<ul class="submenu">
+									<li><a href="#">Cadastrar </a></li>
+									<li><a href="#">Consultar</a></li>
+								</ul>
+							</li>
+							<li><a href="#">Transportador <img src="dist/imagens/setad.png" class="setad" alt="Opções de Transportador"/></a>
+								<ul class="submenu">
+									<li><a href="#">TAC<img src="dist/imagens/setad.png" class="setad" alt="Opções de Câmera"/></a>
+										<ul class="submenu">
+											<li><a href="#">Cadastrar </a></li>
+											<li><a href="#">Consultar</a></li>
+										</ul>
+									</li>
+									<li><a href="#">TETI<img src="dist/imagens/setad.png" class="setad" alt="Opções de Câmera"/></a>
+										<ul class="submenu">
+											<li><a href="#">Cadastrar </a></li>
+											<li><a href="#">Consultar</a></li>
+										</ul>
+									</li>
+									<li><a href="#">ETC<img src="dist/imagens/setad.png" class="setad" alt="Opções de Câmera"/></a>
+										<ul class="submenu">
+											<li><a href="#">Cadastrar </a></li>
+											<li><a href="#">Consultar</a></li>
+										</ul>
+									</li>
+								</ul>
+							</li>
+							<li><a href="#">Câmera <img src="dist/imagens/setad.png" class="setad" alt="Opções de Câmera"/></a>
+								<ul class="submenu">
+									<li><a href="#">Cadastrar </a></li>
+									<li><a href="#">Consultar</a></li>
+								</ul>
+							</li>
+							<li><a href="#">Balança <img src="dist/imagens/setad.png" class="setad" alt="Opções de Balança"/></a>
+								<ul class="submenu">
+									<li><a href="#">Cadastrar </a></li>
+									<li><a href="#">Consultar</a></li>
+								</ul>
+							</li>
+						</ul>
+					</li>
+					<li><a href="#">Posto de Pesagem <img src="dist/imagens/seta.png" class="seta" alt="Opções de Pesagem"/></a>
+						<ul>
+							<li><a href="#">Pesagem <img src="dist/imagens/setad.png" class="setad" alt="Opções de Pesagem"/></a>
+								<ul class="submenu">
+									<li><a href="#">Registrar </a></li>
+									<li><a href="#">Consultar</a></li>
+								</ul>
+							</li>
+						</ul>
+					</li> 
+					<li><a href="#">Relatório <img src="dist/imagens/seta.png" class="seta" alt="Opções de Relatório"/></a>
+						<ul>
+							<li><a href="#">Emitir</a></li>
+						</ul>
+					</li>
+					<li><a href="#">Usuário<img src="dist/imagens/seta.png" class="seta" alt="Opções de Usuário"/></a>
+						<ul>
+							<li><a href="#">Cadastrar</a></li>
+							<li><a href="#">Consultar</a></li>
+						</ul>
+					</li>
+					<li><a href="#">Ajuda<img src="dist/imagens/seta.png" class="seta" alt="Opções de Ajuda"/></a>
+						<ul>
+							<li><a href="#">Fale Conosco</a></li>
+							<li><a href="#">FAQ</a></li>
+						</ul>
+					</li>
+				<!--Aqui tem uma ul diferente-->
+					<li><img src="dist/imagens/iconeMenu.png" class="iconeMenu" alt="Menu do Usuário"/>
+						<ul id="last">
+							<li><a href="#">Minha Conta</a></li>
+							<li><a href="#">Sair</a></li>
+						</ul>
+				<!--aqui termina a ul do botao sair e minha conta-->
+					</li>
+				</ul>
+			</div>
+			<div id="darkBox"></div>
+		</div><!-- Fim da div header -->
+		
+		<div id="main">
+			<div class="centro">
+			
+					<!-- =======================NÃO EDITE ACIMA ====================-->
+			
+				<h1>Consulta de Motorista</h1>
+				<form action="#" method="post" id="formularioJ">
+								<fieldset>
+								<legend>Dados de Contato:</legend>
+								<div class="campo"> 
+									<label for="idJ">ID:</label><br> 
+									<input type="text" name="id" id="idJ" class="campoObrig iLetras" size="11" disabled ><span id="x_idJ" class="tSpan"></span>
+								</div><br>
+								<div class="campo"> 
+									<label for="nomeJ">Nome:</label><br> 
+									<input type="text" name="nome" id="nomeJ" class="campoObrig iLetras" placeholder="Nome Completo" size="47" maxlength="60"><span id="x_nomeJ" class="tSpan"></span>
+								</div>
+
+								<div class="campo"> 
+									<label for="cpfJ">CPF:</label><br> 
+									<input type="text" name="cpf" id="cpfJ" placeholder=" ___.___.___-__"  class="campoObrig" size="18" maxlength="14"><span id="x_cpfJ" class="tSpan"></span>
+								</div>
+								<div class="campo"> 
+									<label for="dataJ">Data Nascimento:</label><br> 
+									<input type="text" name="data" id="dataJ" size="9" placeholder="__/__/_____" maxlength="10" class="campoObrig data"><span id="x_dataJ" class="tSpan"></span>
+								</div>
+								<div class="campo">
+									<label for="sexoJ">Sexo:</label><br> 
+										<select id="sexoJ" name="sexo"> 
+											<option selected value="M">Masculino</option>
+											<option value="F">Feminino</option>
+										</select><span id="x_tipoJ" class="tSpan"></span>
+								</div>
+								<div class="campo"> 
+									<label for="cnhJ">CNH:</label><br> 
+									<input type="text" name="cnh" id="cnhJ" size="13" maxlength="14" class="campoObrig"><span id="x_cnhJ" class="tSpan"></span>
+								</div><br>
+								<div class="campo"> 
+									<label for="rgJ">RG:</label><br> 
+									<input type="text" name="rg" id="rgJ" size="18" maxlength="14" class="campoObrig"><span id="x_rgJ" class="tSpan"></span>
+								</div>
+								
+								<div class="campo"> 
+									<label for="orgaoEmissorJ">Orgão Emissor:</label><br> 
+									<input type="text" name="orgaoEmissor" id="orgaoEmissorJ" placeholder="Ex. Detran" size="19" maxlength="14" class="campoObrig iLetras"><span id="x_orgaoEmissorJ" class="tSpan"></span>
+								</div>
+								
+								
+								<br />
+								<div class="campo"> 
+									<label for="telJ">Telefone:</label><br> 
+									<input type="text" name="tel" id="telJ" placeholder="( __ ) ____-____" size="14" maxlength="12" class=""><span id="x_telJ" class="tSpan" ></span>
+								</div>
+								<div class="campo"> 
+									<label for="celJ">Celular:</label><br> 
+									<input type="text" name="cel" id="celJ" placeholder="( __ ) _____-____" size="16" maxlength="13" class="campoObrig"><span id="x_celJ" class="tSpan"></span>
+								</div>
+								<div class="campo"> 
+									<label for="emailJ">E-mail:</label><br> 
+									<input type="email" name="email" id="emailJ" size="29" placeholder="contato@exemplo.com" class="campoObrig"><span id="x_emailJ" class="tSpan"></span>
+								</div><br>
+								</fieldset>
+								<fieldset>	
+						<legend>Dados de Endereço:</legend>
+						<div class="campo"> 
+							<label for="logradouroJ">Logradouro:</label><br>
+							<input type="text" name="logradouro" id="logradouroJ" size="35" maxlength="40" class="campoObrig" placeholder="Rua, Av" ><span id="x_logradouroJ" class="tSpan"></span>
+						</div>
+						<div class="campo"> 
+							<label for="bairroJ">Bairro:</label><br>
+							<input type="text" name="bairro" id="bairroJ" maxlength="37" class="campoObrig" placeholder="" ><span id="x_bairroJ" class="tSpan"></span>
+						</div>
+						<div class="campo"> 
+							<label for="numeroJ">Número:</label><br> 
+							<input type="text" name="numero" id="numeroJ" maxlength="9" size="4" class="campoObrig" placeholder="Nº" ><span id="x_numeroJ" class="tSpan"></span>
+						</div>
+                                                <div class="campo"> 
+							<label for="complementoJ">Complemento:</label><br> 
+							<input type="text" name="complemento" id="complementoJ" maxlength="15" class="campoObrig iLetras"><span id="x_complementoJ" class="tSpan"></span>
+						</div>
+						<div class="campo"> 
+							<label for="cepJ">CEP:</label><br> 
+							<input type="text" name="cep" id="cepJ" maxlength="10" size="12" class="campoObrig" placeholder="______-____" ><span id="x_cepJ" class="tSpan"></span>
+						</div>
+						<div class="campo"> 
+							<label for="cidadeJ">Cidade:</label><br> 
+							<input type="text" name="cidade" id="cidadeJ" maxlength="20" class="campoObrig iLetras" placeholder="Ex: Rio de Janeiro" ><span id="x_cidadeJ" class="tSpan"></span>
+						</div>
+                                                
+						<div class="campo"> 
+							<label for="ufJ">UF:</label><br> 
+							<select id="ufJ" name="ufInicial"> 
+								<option value="AC">AC</option> 
+								<option value="AL">AL</option> 
+								<option value="AM">AM</option> 
+								<option value="AP">AP</option> 
+								<option value="BA">BA</option> 
+								<option value="CE">CE</option> 
+								<option value="DF">DF</option> 
+								<option value="ES">ES</option> 
+								<option value="GO">GO</option> 
+								<option value="MA">MA</option> 
+								<option value="MT">MT</option> 
+								<option value="MS">MS</option> 
+								<option value="MG">MG</option> 
+								<option value="PA">PA</option> 
+								<option value="PB">PB</option> 
+								<option value="PR">PR</option> 
+								<option value="PE">PE</option> 
+								<option value="PI">PI</option> 
+								<option value="RJ" selected>RJ</option> 
+								<option value="RN">RN</option> 
+								<option value="RO">RO</option> 
+								<option value="RS">RS</option> 
+								<option value="RR">RR</option> 
+								<option value="SC">SC</option> 
+								<option value="SE">SE</option> 
+								<option value="SP">SP</option> 
+								<option value="TO">TO</option>
+							</select><span id="x_ufJ" class="tSpan"></span>
+						</div><!--Fim campo ufInicial-->
+					</fieldset>
+					<div class="botoes" id="botoes">
+						<input type="reset" value="CANCELAR" name="Limpar" id="limparJ" class="botaoJ">
+						<input type="submit" value="ENVIAR" name="enviar" id="enviarJ" class="botaoJ">
+					</div><!--Fim div botoes-->
+				</form>
+				
+				<!-- ===== NÃO EDITE A PARTIR DAQUI =========================================-->
+				
+				</div><!--Fim div centro-->		
+				<div id="clear"></div><!--Fim div clear-->
+			</div><!--Fim div main conteúdo-->	
+		<div id="rodape">
+			<div class="main">
+				<div id="footer">
+					&copy 2015 - Projeto Digimon | Forsoft Rio
+				</div><!--Fim div Footer-->
+			</div><!--Fim div main do rodape-->
+		</div><!--Fim div "rodape"-->
+	</div><!--Fim div Interface-->
+</body>
+</html>

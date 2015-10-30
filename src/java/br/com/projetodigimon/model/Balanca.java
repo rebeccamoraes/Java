@@ -11,25 +11,35 @@ package br.com.projetodigimon.model;
  * @author Javapos
  */
 public class Balanca {
-    private long idBalanca;
-    private String numSerie;
+    private int idBalanca;
+    private PostoPesagem postoPesagem;
+    private int numSerie;
     private String fabricante;
     private String modelo;
-    private PostoPesagem postoPesagem;
+    private String situacao;
+   
 
-    public long getIdBalanca() {
+    public int getIdBalanca() {
         return idBalanca;
     }
 
-    public void setIdBalanca(long idBalanca) {
+    public void setIdBalanca(int idBalanca) {
         this.idBalanca = idBalanca;
     }
 
-    public String getNumSerie() {
+    public PostoPesagem getPostoPesagem() {
+        return postoPesagem;
+    }
+
+    public void setPostoPesagem(PostoPesagem postoPesagem) {
+        this.postoPesagem = postoPesagem;
+    }
+
+    public int getNumSerie() {
         return numSerie;
     }
 
-    public void setNumSerie(String numSerie) {
+    public void setNumSerie(int numSerie) {
         this.numSerie = numSerie;
     }
 
@@ -49,12 +59,12 @@ public class Balanca {
         this.modelo = modelo;
     }
 
-    public PostoPesagem getPostoPesagem() {
-        return postoPesagem;
+    public String getSituacao() {
+        return situacao;
     }
 
-    public void setPostoPesagem(PostoPesagem postoPesagem) {
-        this.postoPesagem = postoPesagem;
+    public void setSituacao(String situacao) {
+        this.situacao = situacao;
     }
-    
+
 }

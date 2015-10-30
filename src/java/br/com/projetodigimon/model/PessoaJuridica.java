@@ -4,6 +4,7 @@
  * and open the template in the editor.
  */
 
+
 package br.com.projetodigimon.model;
 
 /**
@@ -11,17 +12,43 @@ package br.com.projetodigimon.model;
  * @author Javapos
  */
 public class PessoaJuridica {
-    private long idPessoaJuridica;
+    private int idPessoaJuridica;
+    private Contato contato;
+    private Endereco endereco;
+    private String cnpj;
     private String nomeFantasia;
     private String razaoSocial;
-    private String cnpj;
 
-    public long getIdPessoaJuridica() {
+    public int getIdPessoaJuridica() {
         return idPessoaJuridica;
     }
 
-    public void setIdPessoaJuridica(long idPessoaJuridica) {
+    public void setIdPessoaJuridica(int idPessoaJuridica) {
         this.idPessoaJuridica = idPessoaJuridica;
+    }
+
+    public Contato getContato() {
+        return contato;
+    }
+
+    public void setContato(Contato contato) {
+        this.contato = contato;
+    }
+
+    public Endereco getEndereco() {
+        return endereco;
+    }
+
+    public void setEndereco(Endereco endereco) {
+        this.endereco = endereco;
+    }
+
+    public String getCnpj() {
+        return cnpj;
+    }
+
+    public void setCnpj(String cnpj) {
+        this.cnpj = cnpj;
     }
 
     public String getNomeFantasia() {
@@ -40,13 +67,13 @@ public class PessoaJuridica {
         this.razaoSocial = razaoSocial;
     }
 
-    public String getCnpj() {
-        return cnpj;
+    public char getSituacao() {
+        return situacao;
     }
 
-    public void setCnpj(String cnpj) {
-        this.cnpj = cnpj;
+    public void setSituacao(char situacao) {
+        this.situacao = situacao;
     }
-    
-    
+    private char situacao;
+
 }

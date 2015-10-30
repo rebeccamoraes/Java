@@ -3,23 +3,42 @@ package br.com.projetodigimon.model;
 
 public class PostoPesquisaBean {
     
-    private long idPosto;
-    private String uf;
+    private int idPosto;
 
-    public void setIdPosto(long idPosto) {
-        this.idPosto = idPosto;
-    }
-
-    public void setUf(String uf) {
-        this.uf = uf;
-    }
-
-    public long getIdPosto() {
+    public int getIdPosto() {
         return idPosto;
     }
 
-    public String getUf() {
-        return uf;
+    public void setIdPosto(int idPosto) {
+        this.idPosto = idPosto;
     }
+
+    public int getKm() {
+        return km;
+    }
+
+    public void setKm(int km) {
+        this.km = km;
+    }
+
+    public String getLongitude() {
+        return longitude;
+    }
+
+    public void setLongitude(String longitude) {
+        this.longitude = longitude;
+    }
+
+    public String getLatitude() {
+        return latitude;
+    }
+
+    public void setLatitude(String latitude) {
+        this.latitude = latitude;
+    }
+    private int km;
+    private String longitude;
+    private String latitude;
+
     
 }

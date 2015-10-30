@@ -11,19 +11,20 @@ package br.com.projetodigimon.model;
  * @author Javapos
  */
 public class Rodovia {
-    private long idRodovia;
+    private int idRodovia;
     private String nome;
-    private int extensaoKM;
+    private int extensaoKm;
     private String cidadeInicial;
     private String ufInicial;
     private String cidadeFinal;
     private String ufFinal;
+    private String situacao;
 
-    public long getIdRodovia() {
+    public int getIdRodovia() {
         return idRodovia;
     }
 
-    public void setIdRodovia(long idRodovia) {
+    public void setIdRodovia(int idRodovia) {
         this.idRodovia = idRodovia;
     }
 
@@ -35,12 +36,12 @@ public class Rodovia {
         this.nome = nome;
     }
 
-    public int getExtensaoKM() {
-        return extensaoKM;
+    public int getExtensaoKm() {
+        return extensaoKm;
     }
 
-    public void setExtensaoKM(int extensaoKM) {
-        this.extensaoKM = extensaoKM;
+    public void setExtensaoKm(int extensaoKm) {
+        this.extensaoKm = extensaoKm;
     }
 
     public String getCidadeInicial() {
@@ -74,6 +75,17 @@ public class Rodovia {
     public void setUfFinal(String ufFinal) {
         this.ufFinal = ufFinal;
     }
+
+    public String getSituacao() {
+        return situacao;
+    }
+
+    public void setSituacao(String situacao) {
+        this.situacao = situacao;
+    }
+    
+    
+    
     
     
 }
