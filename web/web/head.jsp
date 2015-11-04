@@ -5,6 +5,8 @@
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
+<!DOCTYPE HTML>
+<html lang="pt-br">
 <head>
     <title>Bem-Vindo | DigiMon</title>
     <link rel="stylesheet" type="text/css" href="dist/css/estilo.css">

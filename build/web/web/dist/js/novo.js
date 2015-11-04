@@ -223,11 +223,9 @@ function somenteNumeros(e){
 	var numero = /(48|49|50|51|52|53|54|55|56|57)/;
 	var elm = e.currentTarget;
 	var code = e.which || e.keyCode;
-	if ( code != 8 && code != 127 && code != 9 && code != 35 && code != 36 && code != 37 && code != 39 && code != 123) {
+	if ( code !== 8 && code !== 127 && code !== 9 && code !== 35 && code !== 36 && code !== 37 && code !== 39 && code !== 123 && code !==17) {
 		if ( !numero.test(code) ) {
 			e.preventDefault();
-			e.currentTarget.nextSibling.style.display = "block";
-			e.currentTarget.nextSibling.innerHTML = "Digite Apenas Números";//pega o elemento em que acontece o evento, depois a tag "vizinha" e insere o HTML
 			return false;
 		}else if ( numero.test(code) ){
 			e.currentTarget.nextSibling.innerHTML = "";//pega o elemento em que acontece o evento, depois a tag "vizinha" e insere o HTML
@@ -241,8 +239,9 @@ function somenteLetras(e){
 	var code = e.which || e.keyCode;
 	var caracter = String.fromCharCode(code);
 	var res = caracter.match(regexLETRAS);
+        
 	console.log(code);
-	if ( code != 8 && code != 127 && code != 46 && code != 9 && code != 35 && code != 36 && code != 37 && code != 38 && code != 39 ) {
+	if ( code !== 8 && code !== 127 && code !== 46 && code !== 9 && code !== 35 && code !== 36 && code !== 37 && code !== 38 && code !== 39 && code !==17 ) {
 		if ( !res ) {
 			e.preventDefault();
 			e.currentTarget.nextSibling.style.display = "block";
@@ -284,13 +283,27 @@ function alternate(id){
   } 
 
 }
-
 /*fim tabela*/
 window.onload = function () {
 var y = _gbc("campoObrig");/*class de todos os inputs que devem ser iserido o texto "Campo Obriatório"*/
 var x = _gbc("tSpan");/*class de todas as tags span*/
-
-	/*EFEITO MENU CAIXA PRETA*/
+        //Deixando as letras maiusculas
+        for(var i =0; i<y.length; i++){
+            if ( hasClass(y[i], "campoObrig") ){
+                y[i].onkeyup = function abcd(){ 
+                    var goku = _gbc("campoObrig");
+                    for(var i=0; i<goku.length; i++){
+                    goku[i].value = goku[i].value.toUpperCase();
+                }
+            };
+            
+          
+             }
+        }
+        
+        
+          //Fim letras maiuscuals    
+        /*EFEITO MENU CAIXA PRETA*/
 	var _gebt = document.getElementsByTagName("li")
 	
 	for (var i = 1; i < _gebt.length; i++) {
@@ -330,7 +343,7 @@ var x = _gbc("tSpan");/*class de todas as tags span*/
 				};
 			}
 		}
-		var validaMasc = function (idCampo, mascare){
+		var validaMasc = function (idCampo, mascare, nome){
 			var campo = _$(idCampo);
 			if ( campo ) {
 				//var code = event.which || event.keyCode;
@@ -338,6 +351,7 @@ var x = _gbc("tSpan");/*class de todas as tags span*/
 				campo.onkeypress = function (e) {	
 					somenteNumeros(e);
 					mascara(e, mascare);
+                                        addMsgErro(e.currentTarget, nome);
 				}
 			}	
 		}
@@ -355,7 +369,8 @@ var x = _gbc("tSpan");/*class de todas as tags span*/
 		validaMasc("dataNascimentoJ", "##/##/####");
 		validaMasc("kmJ", "#####");
 		validaMasc("rgJ","##.###.###-#");				
-		validaMasc("rgJD","##.###.###-#");	
+		validaMasc("rgJD","##.###.###-#");
+                validaMasc("extensaoKMJ","", "km");
 		var placaJ = _$("placaJ");
 		if ( placaJ ) {
 			placaJ.onkeypress = function (e) {
@@ -415,6 +430,7 @@ _$("formularioJ").onsubmit = function(e){
 	}
 }
 }
+
 /*_$("limparJ").onclick = function limpo(campo) { 
 	var l = _gbc("limpar");
 	for (var i = 0; i < l.length; i++){

@@ -72,21 +72,15 @@
                     </fieldset>
 					
 					<div class="botoes" id="botoes">
-						<input type="reset" value="Cancelar" name="Limpar" id="limparJ" class="botaoJ">
-						<input type="submit" value="Enviar" name="enviar" id="enviarJ" class="botaoJ">
+						<input type="reset" value="CANCELAR" name="Limpar" id="limparJ" class="botaoJ">
+						<input type="submit" value="ENVIAR" name="enviar" id="enviarJ" class="botaoJ">
 					</div><!--Fim div botoes-->
 				</form>
                 <!-- ===== NÃO EDITE A PARTIR DAQUI =========================================-->
                 </div><!--Fim div centro-->
                 <div id="clear"></div><!--Fim div clear-->
             </div><!--Fim div main conteúdo-->
-            <div id="rodape">
-                <div class="main">
-                    <div id="footer">
-                        &copy 2015 - Projeto Digimon | Forsoft Rio
-                    </div><!--Fim div Footer-->
-                </div><!--Fim div main do rodape-->
-            </div><!--Fim div "rodape"-->
+             <%@ include file="footer.jsp" %> 
         </div><!--Fim div Interface-->
     </body>
 </html>

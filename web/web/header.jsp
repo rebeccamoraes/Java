@@ -52,24 +52,8 @@
                     </li>
                     <li><a href="#">Transportador <img src="dist/imagens/setad.png" class="setad" alt="Opções de Transportador"/></a>
                         <ul class="submenu">
-                            <li><a href="#">TAC<img src="dist/imagens/setad.png" class="setad" alt="Opções de Câmera"/></a>
-                                <ul class="submenu">
-                                    <li><a href="http://www2.projetodigimon.com.br/Home/ui010cadastrartransportador">Cadastrar</a></li>
-                                    <li><a href="ui029pesquisa.jsp">Consultar</a></li>
-                                </ul>
-                            </li>
-                            <li><a href="#">TETI<img src="dist/imagens/setad.png" class="setad" alt="Opções de Câmera"/></a>
-                                <ul class="submenu">
-                                    <li><a href="http://www2.projetodigimon.com.br/Home/ui010cadastrartransportador">Cadastrar </a></li>
-                                    <li><a href="ui029pesquisa.jsp">Consultar</a></li>
-                                </ul>
-                            </li>
-                            <li><a href="#">ETC<img src="dist/imagens/setad.png" class="setad" alt="Opções de Câmera"/></a>
-                                <ul class="submenu">
-                                    <li><a href="http://www2.projetodigimon.com.br/Home/ui010cadastrartransportador">Cadastrar </a></li>
-                                    <li><a href="ui029pesquisa.jsp">Consultar</a></li>
-                                </ul>
-                            </li>
+                            <li><a href="http://www2.projetodigimon.com.br/Home/ui010cadastrartransportador">Cadastrar </a></li>
+                            <li><a href="http://www2.projetodigimon.com.br/Home/ui011consultartransportador">Consultar</a></li>
                         </ul>
                     </li>
                     <li><a href="#">Câmera <img src="dist/imagens/setad.png" class="setad" alt="Opções de Câmera"/></a>
@@ -108,14 +92,14 @@
                 </ul>
             </li> 
             <li><a href="#">Ajuda<img src="dist/imagens/seta.png" class="seta" alt="Opções de Ajuda"/></a>
-                <ul>
+                <ul class="penultimo">
                    <li><a href="http://www2.projetodigimon.com.br/Home/ui034faleconosco">Fale Conosco</a></li>
                     <li><a href="http://www2.projetodigimon.com.br/Home/ui033faq">FAQ</a></li>
-                    </ul>
+                </ul>
             </li>
             <!--Aqui tem uma ul diferente-->
-            <li><img src="dist/imagens/iconeMenu.png" class="iconeMenu" alt="Menu do Usuário"/>
-                <ul id="last">
+            <li class="last"><img src="dist/imagens/iconeMenu.png" class="iconeMenu" alt="Menu do Usuário"/>
+                <ul class="last">
                     <li><a href="http://www2.projetodigimon.com.br/Home/ui032minhaconta">Minha Conta</a></li>
                     <li><a href="#">Sair</a></li>
                 </ul>

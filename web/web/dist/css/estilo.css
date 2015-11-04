@@ -17,7 +17,7 @@ html, body{
 	height: 100%;
     font-family: "wf_segoe-ui_normal", "Arial", sans-serif;
     font-style: normal;
-    font-size: 14px;
+    font-size: 15px;
     line-height: normal;
 }
 
@@ -299,130 +299,33 @@ element.style {
 /*FIM BARRA INFERIOR*/
 /*TELA PESUISA */
 /* -------------MEXI AQUI-----------*/
-.pesquisa h1{
-	font-size:60px !important;
-	margin-bottom:24px !important;
+.pesquisa .formularioP{
+    display:none;
 }
-.pesquisa .teste{
-	margin:0 auto;
-	width:75%;
-	height:100%;
-	margin-top:11%;
+.pesquisa #formPrincipal{
+    margin-top:20px;
+    margin-left:40%;
+    display:block;
 }
-
-
-
-.pesquisa input#search{
-  width:100%;
-  height: 50px;
-  border: 1px solid #c2c2c2;
-  font-size: 15pt;
-  float: left;
-  color:#3E3C3C;
-  -webkit-border-radius: 5px;
-  -moz-border-radius: 5px;
-  border-radius: 5px;
-  margin:0 auto;
-  padding-right:150px;
-  padding-left:10px;
-  background-image:url(../imagens/setap.png);
-  background-repeat:no-repeat;
-  background-position:745px;
- 
+.pesquisa .formularioP{
+    width:674px;
+    height:100%;
+    margin:0 197px auto;
+    text-transform: none;
+    font-size:13px;
 }
-#selecionar{
-	height:48px;
-	cursor:pointer;
-	position:absolute;
-	top:286px;
-	right:189px;
-	margin-right:-3px;
+.pesquisa .formularioP input{
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    border: 1px solid #c2c2c2;
+    font-size: 16px;
+    padding: 4px;
+    height:21px;
 }
-
-
-.pesquisa button.icon{
-  -webkit-border-top-right-radius: 5px;
-  -webkit-border-bottom-right-radius: 5px;
-  -moz-border-radius-topright: 5px;
-  -moz-border-radius-bottomright: 5px;
-  border-top-right-radius: 5px;
-  border-bottom-right-radius: 5px;
- 
-  border:1px solid #c2c2c2;
-  background: #c2c2c2;
-  height: 50px;
-  width: 50px;
-  color: #4f5b66;
-  font-size: 10pt;
-  margin-left: -51px;
-  background-image:url("../imagens/lupa.png");
-  background-repeat:no-repeat;
-  background-position:10px;
-  cursor:pointer;
-}
-.pesquisa .opcao{
-	top:286px;
-	right:189px;
-	background:#FFF;
-	border:none;
-	border-left:1px solid #c2c2c2;
-	height:48px;
-	padding-right:15px;
-	cursor:pointer;
-	margin-right:12px;
-}
-
-
-
-.pesquisa button.icon:hover{
-	background: #B3B9B8;
-	background-image:url("../imagens/lupa.png");
-	background-repeat:no-repeat;
-	 background-position:10px;
-}
-
-.janelaFormulario{
-	background:#FFF;
-	display:none;
-	min-width:300px;
-
-	float:right;
-	margin-right:185px;
-	-webkit-border-radius: 3px;
-	-moz-border-radius: 3px;
-	border-radius: 3px;
-}
-
-#janelaPrincipal{
-	width:100%;
-	height:100%;
-	background:red;
-}
-
-.fechar{
-	padding:5px 10px;
-	border:1px solid #ccc;
-	border-radius:7px;
-	color:#ccc;
-	cursor:pointer;
-	width:19px;
-	float:right;
-}
-.pesquisa fieldset{
-	margin-top:14px;
-}
-.pesquisa legend{
-	min-width:25px;
-}
-
-.fechar:hover{
-	color:#666;
-	border-color:#666;
-}
-.janelaConteudo{
-	margin-top:10px;
-	margin-left:24px;
-	
+.pesquisa img#lupa{
+    width:20px;
+    height:20px;
 }
 /* ------------ATÉ AQUI------------------*/
 
@@ -461,7 +364,7 @@ img.iconeMenu {
     float: left;
     text-transform: none;
     display: inline;
-    padding: 12px 20px 12px 20px;
+    padding: 12px 15px 12px 15px;
     height: 46px;
     line-height: 45px;
 } 
@@ -501,10 +404,17 @@ ul#menu {
     width: 86px;
 }*/
 
-#last li{
- width:86px;
+
+.last{
+ width:64px;
+}
+.last li{
+ width:86px !important;
 }
 
+.penultimo li{
+    width:152px !important;
+}
 /*FIM SUBMENU*/
 
 
@@ -596,10 +506,6 @@ user agent stylesheetkeygen, select {
 
 input #dataJ .campoObrig {
 	
-}
-
-input, option, select, textarea {
-	text-transform: uppercase;
 }
 
 fieldset {
