@@ -5,6 +5,7 @@
  */
 package br.com.projetodigimon.controller;
 
+import br.com.projetodigimon.dao.DaoVeiculo;
 import br.com.projetodigimon.model.Carga;
 import br.com.projetodigimon.model.Frete;
 import br.com.projetodigimon.model.MotoristaPesquisaBean;
@@ -12,9 +13,14 @@ import br.com.projetodigimon.model.PessoaFisicaPesquisaBean;
 import br.com.projetodigimon.model.PessoaJuridicaPesquisaBean;
 import br.com.projetodigimon.model.ProdutoPesquisaBean;
 import br.com.projetodigimon.model.TransportadorPesquisaBean;
-import br.com.projetodigimon.model.VeiculoPesquisaBean;
+import br.com.projetodigimon.model.Veiculo;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -25,7 +31,7 @@ import javax.servlet.http.HttpServletResponse;
  *
  * @author Sora
  */
-@WebServlet(name = "ServletUI029", urlPatterns = {"/ServletUI029"})
+@WebServlet(name = "ServletUI029", urlPatterns = {"/web/ServletUI029"})
 public class ServletUI029 extends HttpServlet {
 
     /**
@@ -38,13 +44,16 @@ public class ServletUI029 extends HttpServlet {
      * @throws IOException if an I/O error occurs
      */
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
-            throws ServletException, IOException {
+            throws ServletException, IOException, ClassNotFoundException {
         response.setContentType("text/html;charset=UTF-8");
         PrintWriter out = response.getWriter();
-        String filtro = request.getParameter("filtro");
+        String filtro = request.getParameter("pesquisa");
 
         //Veiculo
-        VeiculoPesquisaBean veiculo = new VeiculoPesquisaBean();
+        //VeiculoPesquisaBean veiculo = new VeiculoPesquisaBean();
+        Veiculo veiculo = new Veiculo();
+        DaoVeiculo daoveiculo = new DaoVeiculo();
+        List<Veiculo> listaVeiculos = new ArrayList<Veiculo>();
 
         //Transportador & pessoa juridica
         TransportadorPesquisaBean transportador = new TransportadorPesquisaBean();
@@ -58,63 +67,59 @@ public class ServletUI029 extends HttpServlet {
 
         //Carga (usei a entidade inteira)
         Carga carga = new Carga();
-        
+
         //Produto 
         ProdutoPesquisaBean produto = new ProdutoPesquisaBean();
-        
+
         //Frete  (usei a entidade inteira)
-        Frete frete = new Frete();        
+        Frete frete = new Frete();
+        try {
+            if (filtro.equalsIgnoreCase("VEICULO")) {
+                veiculo.setPlaca(request.getParameter("placa"));
+                listaVeiculos = daoveiculo.listar(veiculo);
+                request.setAttribute("Veiculos", listaVeiculos);
 
-        if (filtro.equalsIgnoreCase("veiculo")) {
-            veiculo.setPlaca(request.getParameter("placa"));
-            //inserir dao.listar + try catch
+                //inserir dao.listar + try catch
+            } else if (filtro.equalsIgnoreCase("TRANSPORTADOR")) {
+                transportador.setRntrc(request.getParameter("rntrc"));
+                pessoaj.setCnpj(request.getParameter("cnpj"));
+                pessoaj.setNome(request.getParameter("nome"));  // conferir se é nome fantasia ou nome.
+                //inserir dao.listar + try catch
+
+            } else if (filtro.equalsIgnoreCase("PESSOA_JURIDICA")) {
+                pessoaj.setCnpj(request.getParameter("cnpj"));
+                pessoaj.setNome(request.getParameter("nome"));
+                //inserir dao.listar + try catch
+            } else if (filtro.equalsIgnoreCase("PESSOA_FISICA")) {
+                pessoaf.setCpf(request.getParameter("cpf"));
+                pessoaf.setNome(request.getParameter("nome"));
+                //inserir dao.listar + try catch
+            } else if (filtro.equalsIgnoreCase("MOTORISTA")) {
+                motorista.setCnh(Integer.parseInt(request.getParameter("cnh")));
+                pessoaf.setNome(request.getParameter("nome")); // Conferir de onde vai vir o nome
+                //inserir dao.listar + try catch
+            } else if (filtro.equalsIgnoreCase("CARGA")) {
+                carga.setTipo(request.getParameter("tipo"));
+                carga.setRemetente(request.getParameter("remetente"));
+                carga.setDestinatario(request.getParameter("destinatario"));
+                //inserir dao.listar + try catch
+            } else if (filtro.equalsIgnoreCase("PRODUTO")) {
+                produto.setMercadoria(request.getParameter("mercadoria"));
+                //inserir dao.listar + try catch
+            } else if (filtro.equalsIgnoreCase("FRETE")) {
+                frete.setTipo(request.getParameter("tipo"));
+
+                //inserir dao.listar + try catch
+                //Ver como vai ser o periodo
+            }
+        } catch (NumberFormatException e) {
+            System.out.println("Erro no Dao " + filtro);
+            //Inserir um jsp de erro ?
         }
 
-        if (filtro.equalsIgnoreCase("transportador")) {
-            transportador.setRntrc(request.getParameter("rntrc"));
-            pessoaj.setCnpj(request.getParameter("cnpj"));
-            pessoaj.setNome(request.getParameter("nome"));  // conferir se é nome fantasia ou nome.
-             //inserir dao.listar + try catch
-
-        }
-
-        if (filtro.equalsIgnoreCase("pessoaJuridica")) {
-            pessoaj.setCnpj(request.getParameter("cnpj"));
-            pessoaj.setNome(request.getParameter("nome"));
-             //inserir dao.listar + try catch
-        }
-
-        if (filtro.equalsIgnoreCase("pessoaFisica")) {
-            pessoaf.setCpf(request.getParameter("cpf"));
-            pessoaf.setNome(request.getParameter("nome"));
-             //inserir dao.listar + try catch
-        }
-
-        if (filtro.equalsIgnoreCase("motorista")) {
-            motorista.setCnh(Integer.parseInt(request.getParameter("cnh")));
-            pessoaf.setNome(request.getParameter("nome")); // Conferir de onde vai vir o nome
-             //inserir dao.listar + try catch
-        }
-
-        if (filtro.equalsIgnoreCase("carga")) {
-            carga.setTipo(request.getParameter("tipo"));
-            carga.setRemetente(request.getParameter("remetente"));
-            carga.setDestinatario(request.getParameter("destinatario"));
-             //inserir dao.listar + try catch
-        }
-        
-        if (filtro.equalsIgnoreCase("produto")){
-            produto.setMercadoria(request.getParameter("mercadoria"));
-             //inserir dao.listar + try catch
-        }
-        
-        if (filtro.equalsIgnoreCase("frete")){
-            frete.setTipo(request.getParameter("tipo"));
-            
-             //inserir dao.listar + try catch
-            //Ver como vai ser o periodo
-        }
-        
+        //Dispatcher de teste        
+        RequestDispatcher rd = request.getRequestDispatcher("ui029pesquisa.jsp");
+        rd.forward(request, response);
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
@@ -129,7 +134,11 @@ public class ServletUI029 extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        processRequest(request, response);
+        try {
+            processRequest(request, response);
+        } catch (ClassNotFoundException ex) {
+            Logger.getLogger(ServletUI029.class.getName()).log(Level.SEVERE, null, ex);
+        }
     }
 
     /**
@@ -143,7 +152,11 @@ public class ServletUI029 extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        processRequest(request, response);
+        try {
+            processRequest(request, response);
+        } catch (ClassNotFoundException ex) {
+            Logger.getLogger(ServletUI029.class.getName()).log(Level.SEVERE, null, ex);
+        }
     }
 
     /**

@@ -3,7 +3,6 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-
 package br.com.projetodigimon.model;
 
 /**
@@ -11,6 +10,7 @@ package br.com.projetodigimon.model;
  * @author Javapos
  */
 public class Veiculo {
+
     private long idVeiculo;
     private String uf;
     private String placa;
@@ -55,9 +55,9 @@ public class Veiculo {
     }
 
     public void setPlaca(String placa) {
-        String letras=placa.substring(0, 3);
+        String letras = placa.substring(0, 3);
         String numeros = placa.substring(4, 8);
-        placa = (letras.toUpperCase()+"-"+numeros);
+        placa = (letras.toUpperCase() + "-" + numeros);
         this.placa = placa;
     }
 
@@ -140,6 +140,5 @@ public class Veiculo {
     public void setTransportador(Transportador transportador) {
         this.transportador = transportador;
     }
-    
-    
+
 }
