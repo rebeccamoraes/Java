@@ -46,14 +46,14 @@
                             <input type="submit" value="ENVIAR" name="enviar" id="enviarJ" class="botaoJ">
                         </div><!--Fim div botoes-->
                     </form>
-                    <form action="" method="post" id="formVeiculo" class="formularioP">
+                    <form action="ServletUI029" method="post" id="formVeiculo" class="formularioP">
                         <div class="campo">
                             <label for="placaJ">Placa</label><br> 
                             <input type="text" name="placa" id="placaJ" placeholder="AAA-0000" maxlength="8"><span id="x_placaJ" class="tSpan"></span>
                         </div>
                         <img src="dist/imagens/lupa.png" id="lupa"/>
                     </form>
-                    <form action="" method="post" id="formMotorista" class="formularioP">
+                    <form action="ServletUI029" method="post" id="formMotorista" class="formularioP">
                         <div class="campo">
                             <label for="nomeJ">Nome</label><br> 
                             <input type="text" name="nome" id="nomeJ" class="iLetras"><span id="x_nomeJ" class="tSpan"></span>
@@ -63,7 +63,7 @@
                             <input type="text" name="cnh" id="cnhJ" ><span id="x_cnhJ" class="tSpan"></span>
                         </div>
                     </form>
-                    <form action="" method="post" id="formTransportador" class="formularioP">
+                    <form action="ServletUI029" method="post" id="formTransportador" class="formularioP">
                         <div class="campo">
                             <label for="cnpjJ">CNPJ</label><br> 
                             <input type="text" name="cnpj" id="cnpjJ"><span id="x_cnpjJ" class="tSpan"></span>
@@ -78,7 +78,7 @@
                         </div>
 
                     </form>
-                    <form action="" method="post" id="formPJ" class="formularioP">
+                    <form action="ServletUI029" method="post" id="formPJ" class="formularioP">
                         <div class="campo">
                             <label for="cnpjJ">CNPJ</label><br> 
                             <input type="text" name="cnpj" id="cnpjJ"><span id="x_cnpjJ" class="tSpan"></span>
@@ -88,7 +88,7 @@
                             <input type="text" name="nome" id="nomeJ" class="iLetras"><span id="x_nomeJ" class="tSpan"></span>
                         </div>
                     </form>
-                    <form action="" method="post" id="formCarga" class="formularioP">
+                    <form action="ServletUI029" method="post" id="formCarga" class="formularioP">
                         <div class="campo">
                             <label for="tipoJ">Tipo</label><br> 
                             <input type="text" name="tipo" id="tipoJ"><span id="x_tipoJ" class="tSpan"></span>
@@ -102,7 +102,7 @@
                             <input type="text" name="destinatario" id="destinatarioJ"><span id="x_destinatarioJ" class="tSpan"></span>
                         </div>
                     </form>
-                    <form action="" method="post" id="formPF" class="formularioP">
+                    <form action="ServletUI029" method="post" id="formPF" class="formularioP">
                         <div class="campo">
                             <label for="cpfJ">CPF</label><br> 
                             <input type="text" name="cpf" id="cpfjJ"><span id="x_cpfJ" class="tSpan"></span>
@@ -112,13 +112,13 @@
                             <input type="text" name="nome" id="nomeJ"><span id="x_nomeJ" class="tSpan"></span>
                         </div>
                     </form>
-                    <form action="" method="post" id="formProduto" class="formularioP">
+                    <form action="ServletUI029" method="post" id="formProduto" class="formularioP">
                         <div class="campo">
                             <label for="mercadoriaJ">Mercadoria</label><br> 
                             <input type="text" name="mercadoria" id="mercadoriaJ"><span id="x_mercadoriaJ" class="tSpan"></span>
                         </div>    
                     </form>
-                    <form action="" method="post" id="formFrete" class="formularioP">
+                    <form action="ServletUI029" method="post" id="formFrete" class="formularioP">
                         <div class="campo">
                             <label for="tipoJ">Tipo</label><br> 
                             <input type="text" name="tipo" id="tipoJ"><span id="x_tipoJ" class="tSpan"></span>
