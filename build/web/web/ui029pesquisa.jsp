@@ -168,12 +168,33 @@
                             <input type="submit" value="ENVIAR" name="enviar" id="enviarJ" class="botaoJ">
                         </div>
                     </form>
+                 
 
-                    <!-- ===== CFOREACH REMOVER ======= -->
-                    <table>                       
+                    <!-- ===== NÃO EDITE A PARTIR DAQUI =========================================-->
+                    <fieldset>
+                        <legend></legend>
+                    </fieldset>    
+                       <!-- ===== CFOREACH REMOVER ======= -->
+                    <table  id="tblConsulta">       
+                        <tr>
+                            <td class="cabecalh">Id Veiculo</td>
+                            <td class="cabecalh">Placa</td>
+                            <td class="cabecalh">Renavam</td>
+                            <td class="cabecalh">Ano de Fabricação</td>
+                            <td class="cabecalh">Tipo</td>
+                            <td class="cabecalh">Modelo</td>
+                            <td class="cabecalh">Marca</td>
+                            <td class="cabecalh">Numero de eixos</td>
+                            <td class="cabecalh">Tara</td>
+                            <td class="cabecalh">CMT</td>
+                            <td class="cabecalh">PBT</td>
+                            <td class="cabecalh">Cidade</td>
+                            <td class="cabecalh">UF</td>
+                            <td class="cabecalh">Situação</td>
+                        </tr>
                     <c:forEach var="veiculo" items="${Veiculos}">
                         <tr>
-                            <td>${veiculo.idVeiculo}</td>
+                            <td >${veiculo.idVeiculo}</td>
                             <td>${veiculo.placa}</td>
                             <td>${veiculo.renavam}</td>
                             <td>${veiculo.anoDeFabricacao}</td>
@@ -191,11 +212,6 @@
                     </c:forEach>
                     </table>
                     <!-- ===== CFOREACH REMOVER ======= -->
-
-                    <!-- ===== NÃO EDITE A PARTIR DAQUI =========================================-->
-                    <fieldset>
-                        <legend></legend>
-                    </fieldset>    
                 </div>
                 <div id="clear"></div>
             </div>

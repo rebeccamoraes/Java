@@ -75,8 +75,8 @@ public class ServletUI029 extends HttpServlet {
         try {
             if (filtro.equalsIgnoreCase("VEICULO")) {
                 veiculo.setPlaca(request.getParameter("placa"));
-                listaVeiculo = daoveiculo.listar(veiculo);
-                request.setAttribute("Veiculos", listaVeiculo);
+                listaVeiculo = daoveiculo.listar(veiculo);  //Atribuindo a instância de listVeiculo o método daoveiculo.listar
+                request.setAttribute("Veiculos", listaVeiculo); //Atribuindo uma lista de nome "Veiculos" os resultados de listaVeiculo
 
                 //inserir dao.listar + try catch
             } else if (filtro.equalsIgnoreCase("TRANSPORTADOR")) {

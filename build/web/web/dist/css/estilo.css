@@ -1,11 +1,11 @@
 @charset "UTF-8";
 
 html {
-	background: url(../imagens/bg-logado.jpg) no-repeat center center fixed;  /*imagem fixada no centro e sem repetição */
-	-webkit-background-size: cover; /*regra para a imagem ocupar toda a extensão dá página em diferentes navegadores */
-	-moz-background-size: cover;
-	-o-background-size: cover;
-	background-size: cover;
+    background: url(../imagens/bg-logado.jpg) no-repeat center center fixed;  /*imagem fixada no centro e sem repetição */
+    -webkit-background-size: cover; /*regra para a imagem ocupar toda a extensão dá página em diferentes navegadores */
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
 }
 
 #titlePag{
@@ -14,7 +14,7 @@ html {
 
 
 html, body{
-	height: 100%;
+    height: 100%;
     font-family: "wf_segoe-ui_normal", "Arial", sans-serif;
     font-style: normal;
     font-size: 15px;
@@ -22,7 +22,7 @@ html, body{
 }
 
 .sobre {
-	
+
     width: 744px;
     height: 272px;
     margin-left: 0px;
@@ -39,10 +39,10 @@ html, body{
 /*TODO O Conteudo*/
 
 #interface {
-	min-height: 100%;
-	position: relative;
-	margin-left:-8px;
-	margin-right:-8px;
+    min-height: 100%;
+    position: relative;
+    margin-left:-8px;
+    margin-right:-8px;
 }
 
 .seta {
@@ -58,37 +58,37 @@ html, body{
     height: 6px;
     margin-top: 10px;
     color: #C1C0C0;
-	float:right;
+    float:right;
 }
 
 * html #interface {
-	height: 100%; /* hack para IE6 que trata height como min-height */
+    height: 100%; /* hack para IE6 que trata height como min-height */
 }
 
 /*BARRA Superior*/
 #header {
-	height: 70px;
-	background-color: #080e1c;/*altura e cor da barra superior */
-	width: 100%;
-	margin-top:-8px;
-	position: fixed;
-	z-index: 99999;
-	color:white;
-	box-shadow: 0px 6px 8px #7C7F80;
+    height: 70px;
+    background-color: #080e1c;/*altura e cor da barra superior */
+    width: 100%;
+    margin-top:-8px;
+    position: fixed;
+    z-index: 99999;
+    color:white;
+    box-shadow: 0px 6px 8px #7C7F80;
 }
 
 /*FIM BARRA SUPERIOR*/
 
 /*CONTEUDO CENTRAL*/
 #main{
-	padding-top:70px;
-	padding-bottom:80px;
-	width:1080px;
-	height:100%;
-	margin:0 auto;
-	position:relative;
-	margin-bottom:0;
-	color:#3E3C3C;
+    padding-top:70px;
+    padding-bottom:80px;
+    width:1080px;
+    height:100%;
+    margin:0 auto;
+    position:relative;
+    margin-bottom:0;
+    color:#3E3C3C;
 }
 element.style {
     margin-top: 17px;
@@ -105,52 +105,52 @@ element.style {
 
 /*-------------------------------------ANTES DE ESTAR LOGADO--------------------------------------------*/
 .initial {
-	background: url(../imagens/bg-home.jpg) center center fixed;  /*imagem fixada no centro e sem repetição */
-	-webkit-background-size: cover; /*regra para a imagem ocupar toda a extensão dá página em diferentes navegadores */
-	-moz-background-size: cover;
-	-o-background-size: cover;
-	background-size: cover;
-        color:#FFF;
+    background: url(../imagens/bg-home.jpg) center center fixed;  /*imagem fixada no centro e sem repetição */
+    -webkit-background-size: cover; /*regra para a imagem ocupar toda a extensão dá página em diferentes navegadores */
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    color:#FFF;
 }
 .initial #main{
     color:#FFF;
 }
 
 .initial #header{
-	background:none;
-	box-shadow:none;
+    background:none;
+    box-shadow:none;
 }
 .initial #rodape{
-	background:none;
+    background:none;
 }
 .initial #rodape .main{
-	border-top:1px solid #FFF;
+    border-top:1px solid #FFF;
 }
 
 .initial .menu{
-	margin-top:20px;
+    margin-top:20px;
 }
 
 .initial .menu li{
-	background:none;
-	padding-bottom:0;
-	padding-top:0;
-	border-right:1px solid #FFF;
-	height:30px;
-	line-height:35px;
+    background:none;
+    padding-bottom:0;
+    padding-top:0;
+    border-right:1px solid #FFF;
+    height:30px;
+    line-height:35px;
 }
 
 .initial .menu li:hover{
-	border-bottom:3px solid  #2F74B5;
+    border-bottom:3px solid  #2F74B5;
 }
 /*-----------------------------------------FIM ANTES DE ESTAR LOGADO-----------------------------------*/
 /*-------------------------------------PAGINA HOME--------------------------------------------*/
 
 
 .home .logo{
-	text-align:center;
-	margin-top:10%;
-	color:#FFF;
+    text-align:center;
+    margin-top:10%;
+    color:#FFF;
 }
 
 .login .logo {
@@ -160,17 +160,17 @@ element.style {
 }
 
 .home p{
-	margin-bottom:60px;
+    margin-bottom:60px;
 }
 
 .home .saibaMais{
-	border:1px solid #FFF;
-	padding:5px 18px 5px 18px;
-	margin-top:3px;
-	cursor:pointer;
+    border:1px solid #FFF;
+    padding:5px 18px 5px 18px;
+    margin-top:3px;
+    cursor:pointer;
 }
 .home .saibaMais:hover{
-	background:#0071C4;
+    background:#0071C4;
 }
 /*-----------------------------------------FIM PAGINA HOME-----------------------------------*/
 
@@ -197,16 +197,16 @@ element.style {
 */
 
 .login #usuarioJ{
-  background-image:url(../imagens/icone-user.png);
-  background-repeat:no-repeat;
-  background-position: 2px;
-  padding:4px 0 4px 35px;
+    background-image:url(../imagens/icone-user.png);
+    background-repeat:no-repeat;
+    background-position: 2px;
+    padding:4px 0 4px 35px;
 }
 .login #senhaJ{
-  background-image:url(../imagens/icone-pass.png);
-  background-repeat:no-repeat;
-  background-position: 2px;
-  padding:4px 0 4px 35px;
+    background-image:url(../imagens/icone-pass.png);
+    background-repeat:no-repeat;
+    background-position: 2px;
+    padding:4px 0 4px 35px;
 }
 
 .login p{
@@ -214,12 +214,12 @@ element.style {
 }
 
 .login .botoes{
-  width:320px;
-  margin:0px 0px 0px 118px;
+    width:320px;
+    margin:0px 0px 0px 118px;
 }
 
 .login .botoes a{
-	color:white;
+    color:white;
 }
 
 .login .botoes #entrarJ {
@@ -227,15 +227,15 @@ element.style {
     margin-top: -42px;
     background-color: #0367D5;
     margin-right: 4px;
-	color: white;
-	opacity: 0.8;
+    color: white;
+    opacity: 0.8;
 }
 
 .login .botoes #entrarJ:hover {
     float: right;
     margin-top: -42px;
     background-color: #00244D;
-	opacity: 0.9;
+    opacity: 0.9;
 }
 
 .login img.logo {
@@ -262,14 +262,14 @@ element.style {
 /*------------------------------------Fim da tela de contato-----------------------------------*/
 /*BARRA INFERIOR*/
 #rodape{
-	position:absolute;
-	bottom:0px;
-	height: 70px;
-	background-color: #080e1c;
-	width: 100%;	
-	display:block;
-	margin-bottom:-8px;
-	margin-right:-8px;
+    position:absolute;
+    bottom:0px;
+    height: 70px;
+    background-color: #080e1c;
+    width: 100%;	
+    display:block;
+    margin-bottom:-8px;
+    margin-right:-8px;
 }
 
 #rodape2 {
@@ -280,21 +280,21 @@ element.style {
     width: 100%;
     bottom: -8px;
     color: white;
-	text-align:center;
+    text-align:center;
 }
 
 #rodape .main{
-	width:1080px;
-	margin:0 auto;
+    width:1080px;
+    margin:0 auto;
 }
 
 #footer{
-	text-align:center;
-	margin:25px auto;
-	color:white;
+    text-align:center;
+    margin:25px auto;
+    color:white;
 }
 #clear{
-	clear: both;
+    clear: both;
 }
 /*FIM BARRA INFERIOR*/
 /*TELA PESUISA */
@@ -333,19 +333,19 @@ element.style {
 /*MENU*/
 
 #header #darkBox{
-	min-height:205px;
-	background:rgba(0,0,0,0.9);
-	display:none;
+    min-height:205px;
+    background:rgba(0,0,0,0.9);
+    display:none;
 }
 #header .main {
-	margin: 0 auto;
-	width:1080px;
-	height:70px;
+    margin: 0 auto;
+    width:1080px;
+    height:70px;
 }
 
 img.logo {
     margin-top: 15px;
-	margin-left:4px;
+    margin-left:4px;
 }
 
 img.iconeMenu {
@@ -353,11 +353,11 @@ img.iconeMenu {
     margin-right: 4px;
 }
 .menu{
-	list-style-type:none;
-	float:right;
-	margin-top:0px;
-	height:70px;
-	right:20px;
+    list-style-type:none;
+    float:right;
+    margin-top:0px;
+    height:70px;
+    right:20px;
 }
 .menu li {
     position: relative;
@@ -374,15 +374,15 @@ ul#menu {
 }
 
 .menu a{
-	text-decoration:none;
-	color:white;
+    text-decoration:none;
+    color:white;
 }
 
 .menu li ul{
-	position:absolute;
-	top:42px;
-	left:-40px;
-	display:none;
+    position:absolute;
+    top:42px;
+    left:-40px;
+    display:none;
 }
 /*SUBMENU*/
 .submenu {
@@ -393,11 +393,11 @@ ul#menu {
 }
 
 .submenu li:hover  {
-	background-color:#00244D;
+    background-color:#00244D;
 }
 
 .menu li ul li:hover > .submenu{
-	display:block !important;
+    display:block !important;
 }
 
 /*.menu li:last-child ul:last-child li {
@@ -406,10 +406,10 @@ ul#menu {
 
 
 .last{
- width:64px;
+    width:64px;
 }
 .last li{
- width:86px !important;
+    width:86px !important;
 }
 
 .penultimo li{
@@ -420,20 +420,20 @@ ul#menu {
 
 
 .menu li ul li{
-	display:block;
-	width:223px;
-	height:25px;
-	line-height:25px;
-	border-bottom:1px solid rgba(255,255,207,0.1);
-	padding:4px;
-	top:28px;
+    display:block;
+    width:223px;
+    height:25px;
+    line-height:25px;
+    border-bottom:1px solid rgba(255,255,207,0.1);
+    padding:4px;
+    top:28px;
 }
 li:hover{
-	background-color:#00244D;
+    background-color:#00244D;
 }
 
 .menu li:hover ul, .menu li ul li:hover ul, .menu li.over ul, .menu li ul li.over ul{
-	display:block;
+    display:block;
 }
 
 
@@ -441,9 +441,9 @@ li:hover{
 
 /*FORMULARIO*/
 .campo{
-	display:inline-block;
-	margin-bottom:15px;
-	margin-right:5px;
+    display:inline-block;
+    margin-bottom:15px;
+    margin-right:5px;
 }
 
 label {
@@ -452,11 +452,11 @@ label {
 }
 
 #formularioJ {
-	width:674px;
-	height:100%;
-	margin:0 197px auto;
-	text-transform: none;
-	font-size:13px;
+    width:674px;
+    height:100%;
+    margin:0 197px auto;
+    text-transform: none;
+    font-size:13px;
 }
 
 element.style {
@@ -483,55 +483,55 @@ user agent stylesheetkeygen, select {
 /*placeholder*/
 
 ::-webkit-input-placeholder {
-   font: 12px verdana, arial, sans-serif;
-   text-transform: none;
+    font: 12px verdana, arial, sans-serif;
+    text-transform: none;
 }
 
 :-moz-placeholder {
-  font: 12px verdana, arial, sans-serif;
-  text-transform: none;
+    font: 12px verdana, arial, sans-serif;
+    text-transform: none;
 }
 
 ::-moz-placeholder {
-   font: 12px verdana, arial, sans-serif;
-   text-transform: none;
+    font: 12px verdana, arial, sans-serif;
+    text-transform: none;
 }
 
 :-ms-input-placeholder {  
-   font: 12px verdana, arial, sans-serif;
-   text-transform: none;
+    font: 12px verdana, arial, sans-serif;
+    text-transform: none;
 }
 
 /*fim placeholder*/
 
 input #dataJ .campoObrig {
-	
+
 }
 
 fieldset {
-	border: none;
-	margin-bottom: 15px;
+    border: none;
+    margin-bottom: 15px;
 }
 
 legend {
-	border-bottom: 2px groove threedface;
-	width: 100%;
-	margin-bottom: 10px;
-	font-size: 18px;
+    border-bottom: 2px groove threedface;
+    width: 100%;
+    margin-bottom: 10px;
+    font-size: 18px;
 }
 
 #formularioJ input{
     -webkit-border-radius: 5px;
     -moz-border-radius: 5px;
-	border-radius: 5px;
+    border-radius: 5px;
     border: 1px solid #c2c2c2;
     font-size: 16px;
     padding: 4px;
-	height:21px;
+    height:21px;
 }
 
 #formularioJ .data {
-	padding:5px;
+    padding:5px;
 }
 
 #botoes input {
@@ -550,8 +550,8 @@ legend {
 
 /*ATUALIZADO DE -63 PARA -57 */
 #botoes {
-	text-align:center;
-	right: -179px;
+    text-align:center;
+    right: -179px;
     position: relative;
 }
 
@@ -562,83 +562,83 @@ legend {
 }
 
 .botao {
-	float:right;
-	margin-left:10px;
-	border:none;
-	
+    float:right;
+    margin-left:10px;
+    border:none;
+
 }
 .botao input{
-	margin-left:100px;
-	margin-top: 35px;
-	height: 50px;
-	width: 150px;
-	margin-left: 15px;
-	color: #FFF;
-	border: none;
-	font-size: 18px;
-	background-color: black;
-	margin-bottom:35px;
-	border-radius:5px;
+    margin-left:100px;
+    margin-top: 35px;
+    height: 50px;
+    width: 150px;
+    margin-left: 15px;
+    color: #FFF;
+    border: none;
+    font-size: 18px;
+    background-color: black;
+    margin-bottom:35px;
+    border-radius:5px;
 }
 .botao .preto{
-	background-image:url(../imagens/btn-preto.png);
+    background-image:url(../imagens/btn-preto.png);
 }
 .botao .amarelo{
-	background-image:url(../imagens/btn-amarelo.png);
+    background-image:url(../imagens/btn-amarelo.png);
 }
 .botao .azul{
-	background-image:url(../imagens/btn-azul.png);
+    background-image:url(../imagens/btn-azul.png);
 }
 .botao :hover{
-	background-image:url(../imagens/btn-efeito.png);
+    background-image:url(../imagens/btn-efeito.png);
 }
 /*FIM FORMULARIO*/
 
 /*ERROS*/
 .tSpan{
-	font-size:10px;
-	position:absolute;
-	color:red;
-	margin-left:8px;
+    font-size:10px;
+    position:absolute;
+    color:red;
+    margin-left:8px;
 }
 /*FIM ERROS*/
 
 /*CONTEUDO SOMENTE CENTRAL*/
 .centro {
-	display:block;
-	width:1080px;
+    display:block;
+    width:1080px;
 }
 
 /*FIM CONTEDO SOMENTE CENTRAL*/
 
 /*CONTEUDO CENTRAL LADO ESQUERDO*/
 .esquerda{
-	float:left;
-	display:block;
-	width:540px;
-	text-align:center;
+    float:left;
+    display:block;
+    width:540px;
+    text-align:center;
 }
 /*FIM CONTEUDO CENTRAL LADO ESQUERDO*/
 
 /*CONTEUDO CENTRAL LADO DIREITO*/
 .direita{
-	text-align:center;
-	display:block;
-	width:540px;
-	float:right;
+    text-align:center;
+    display:block;
+    width:540px;
+    float:right;
 }
 
 /*FIM CONTEUDO CENTRAL LADO DIREITO*/
 /*
 a {
-	text-decoration: none;
-	color: #324481;
-	font-family: "Myriad Pro";
+        text-decoration: none;
+        color: #324481;
+        font-family: "Myriad Pro";
 }
 
 li{
-	list-style:none;
-	margin: 0;
+        list-style:none;
+        margin: 0;
 }
 */
 /*Barra do Menu*/
@@ -648,35 +648,35 @@ li{
 
 /*Div que centraliza o conteÃƒÆ’Ã‚Âºdo
 .wrapper {
-	width: 1080px;
-	margin: 0 auto;
+        width: 1080px;
+        margin: 0 auto;
 }
 
 Menu*/
 /*
 .menu {
-	float: right;
-	margin-top: 5px;
-	height: 70px;
+        float: right;
+        margin-top: 5px;
+        height: 70px;
 }
 
 .menu li {
-	display:inline;
-	float:right;
-	position:relative;
-	width:150px;
-	line-height:28px;
+        display:inline;
+        float:right;
+        position:relative;
+        width:150px;
+        line-height:28px;
 }
 
 .menu li a {
-	font-family: "Myriad Pro";
-	color: white;
-	text-decoration: none;
-	padding: 27px 10px;
+        font-family: "Myriad Pro";
+        color: white;
+        text-decoration: none;
+        padding: 27px 10px;
 }
 
 .menu li a:hover{
-	background-color: #00adf3;/*regra para quando o mouse passar em cima de um item do menu. A regra que define o tamanho da caixa a ser colorida ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Â ÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã‚Â ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬ÃƒÂ¢Ã¢â‚¬Å¾Ã‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€¦Ã‚Â¡ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â© o padding acima. 
+        background-color: #00adf3;/*regra para quando o mouse passar em cima de um item do menu. A regra que define o tamanho da caixa a ser colorida ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã¢â‚¬Â ÃƒÂ¢Ã¢â€šÂ¬Ã¢â€žÂ¢ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã‚Â ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬ÃƒÂ¢Ã¢â‚¬Å¾Ã‚Â¢ÃƒÆ’Ã†â€™Ãƒâ€ Ã¢â‚¬â„¢ÃƒÆ’Ã‚Â¢ÃƒÂ¢Ã¢â‚¬Å¡Ã‚Â¬Ãƒâ€¦Ã‚Â¡ÃƒÆ’Ã†â€™ÃƒÂ¢Ã¢â€šÂ¬Ã…Â¡ÃƒÆ’Ã¢â‚¬Å¡Ãƒâ€šÃ‚Â© o padding acima. 
 }*/
 /*Fim menu*/
 
@@ -685,26 +685,26 @@ Menu*/
 /*fim submenu
 
 .main{
-	min-height: 100%;
-	padding-bottom: 0px;
-	margin: 0 auto;
+        min-height: 100%;
+        padding-bottom: 0px;
+        margin: 0 auto;
 }
 
 .home .header {
-	margin-top:0px;
+        margin-top:0px;
 }
 .home .main .wrapper {
-	width: 750px;
-	/* height: 100%; */
-	/*position: relative;
+        width: 750px;
+        /* height: 100%; */
+/*position: relative;
 }*/
 
 #enviarJ:hover, #alterarJ:hover {
     color: #14396A !important;
     background: transparent -moz-linear-gradient(center top , #295178, #E8E7EE) repeat scroll 0% 0%;
-	background: transparent -webkit-linear-gradient(#295178, #E8E7EE) repeat scroll 0% 0%;
-	background: transparent -o-linear-gradient(#295178, #E8E7EE) repeat scroll 0% 0%;
-	background: transparent linear-gradient(#295178, #E8E7EE) repeat scroll 0% 0%;
+    background: transparent -webkit-linear-gradient(#295178, #E8E7EE) repeat scroll 0% 0%;
+    background: transparent -o-linear-gradient(#295178, #E8E7EE) repeat scroll 0% 0%;
+    background: transparent linear-gradient(#295178, #E8E7EE) repeat scroll 0% 0%;
 }
 
 #limparJ:hover, #enviarJ, #pesquisarJ, #entrarJ {
@@ -718,9 +718,9 @@ Menu*/
     border-radius: 4px;
     border: 0px solid #3866A3;
     background: transparent -moz-linear-gradient(center top , #0678C2, #0F81CA) repeat scroll 0% 0%;
-	background: transparent -webkit-linear-gradient(#0678C2, #0F81CA) repeat scroll 0% 0%;
-	background: transparent linear-gradient(center top , #0678C2, #0F81CA) repeat scroll 0% 0%;
-	background: transparent -o-linear-gradient(center top , #0678C2, #0F81CA) repeat scroll 0% 0%;
+    background: transparent -webkit-linear-gradient(#0678C2, #0F81CA) repeat scroll 0% 0%;
+    background: transparent linear-gradient(center top , #0678C2, #0F81CA) repeat scroll 0% 0%;
+    background: transparent -o-linear-gradient(center top , #0678C2, #0F81CA) repeat scroll 0% 0%;
 
 }
 .DentroSys input {
@@ -737,9 +737,9 @@ Menu*/
 }
 #limparJ:hover {
     background: transparent -moz-linear-gradient(center top , #080F17, #818185) repeat scroll 0% 0%;
-	background: transparent -webkit-linear-gradient(#080F17, #818185) repeat scroll 0% 0%;
-	background: transparent linear-gradient(#080F17, #818185) repeat scroll 0% 0%;
-	background: transparent -o-linear-gradient(#080F17, #818185) repeat scroll 0% 0%;
+    background: transparent -webkit-linear-gradient(#080F17, #818185) repeat scroll 0% 0%;
+    background: transparent linear-gradient(#080F17, #818185) repeat scroll 0% 0%;
+    background: transparent -o-linear-gradient(#080F17, #818185) repeat scroll 0% 0%;
 }
 
 #limparJ {
@@ -761,25 +761,25 @@ Menu*/
 }
 /* ------------------------- Aqui começa a página faq ----------------------------------*/
 .faq .textomeio {
-	margin-left:200px;
-	margin-right:200px;
+    margin-left:200px;
+    margin-right:200px;
 }
 /*----------------------------- Aqui termina a página faq ------------------------- */ 
 
 /* --------------------- Aqui começa a página relatório ---------------------------- */
 .relatorio .radiorelatorio{
-float:right;
+    float:right;
 }
 .relatorio .botoes{
-float:right;
+    float:right;
 }
 /* ----------------------- Aqui termina a página relatório ---------------------- */
 /*--------------------------Aqui começa a tela de cadastrar/consultar pesagem --------*/
 .ui024 option{
-width:105px;
+    width:105px;
 }
 .ui025 option{
-width:154px;
+    width:154px;
 }
 /*----------------------------Aqui termina a tela de cadastrar/consultar pesagem --------*/
 /*------------------------------Aqui começa a tela de consultar posto de pesagem---------------*/
@@ -788,3 +788,34 @@ width:154px;
 }
 
 /*------------------------------Aqui termina a tela de consultar posto de pesagem---------------*/
+/*------------------------------Tabela da tela de pesquisa ----------------------------------------------*/
+
+table#tblConsulta {
+    background-color: rgba(0,0,0, 0.2);
+    min-width: 702px;
+    text-align: center;	
+}
+
+td {
+    height: 25px;
+}
+
+tr td:last-child a {
+    background-repeat: no-repeat;
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    margin: 0 auto;
+    color: transparent;
+    background-image: url(../../img/abrir.png) !important;
+    background-position: 0px 1px !important;
+}
+
+.cabecalh {
+    background-color: #041227;
+    font-weight: bold;
+    font-size: 15px;
+    color:white;
+}
+
+/*---------------------------Fim da tela tabela da tela de pesquisa-----------------------------------*/
