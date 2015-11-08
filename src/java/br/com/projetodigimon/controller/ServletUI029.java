@@ -47,13 +47,12 @@ public class ServletUI029 extends HttpServlet {
             throws ServletException, IOException, ClassNotFoundException {
         response.setContentType("text/html;charset=UTF-8");
         PrintWriter out = response.getWriter();
-        String filtro = request.getParameter("pesquisa");
-
+        String filtro = request.getParameter("filtro");      
         //Veiculo
         //VeiculoPesquisaBean veiculo = new VeiculoPesquisaBean();
         Veiculo veiculo = new Veiculo();
         DaoVeiculo daoveiculo = new DaoVeiculo();
-        List<Veiculo> listaVeiculos = new ArrayList<Veiculo>();
+        List<Veiculo> listaVeiculo = new ArrayList<Veiculo>();
 
         //Transportador & pessoa juridica
         TransportadorPesquisaBean transportador = new TransportadorPesquisaBean();
@@ -76,8 +75,8 @@ public class ServletUI029 extends HttpServlet {
         try {
             if (filtro.equalsIgnoreCase("VEICULO")) {
                 veiculo.setPlaca(request.getParameter("placa"));
-                listaVeiculos = daoveiculo.listar(veiculo);
-                request.setAttribute("Veiculos", listaVeiculos);
+                listaVeiculo = daoveiculo.listar(veiculo);
+                request.setAttribute("Veiculos", listaVeiculo);
 
                 //inserir dao.listar + try catch
             } else if (filtro.equalsIgnoreCase("TRANSPORTADOR")) {
@@ -108,7 +107,6 @@ public class ServletUI029 extends HttpServlet {
                 //inserir dao.listar + try catch
             } else if (filtro.equalsIgnoreCase("FRETE")) {
                 frete.setTipo(request.getParameter("tipo"));
-
                 //inserir dao.listar + try catch
                 //Ver como vai ser o periodo
             }

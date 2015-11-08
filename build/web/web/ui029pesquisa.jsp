@@ -52,7 +52,9 @@
                             <label for="placaJ">Placa</label><br> 
                             <input type="text" name="placa" id="placaJ" placeholder="AAA-0000" maxlength="8"><span id="x_placaJ" class="tSpan"></span>
                         </div>                       
-                        <img src="dist/imagens/lupa.png" id="lupa"/>
+                        <img src="dist/imagens/lupa.png" id="lupa"/>                        
+                        <input type="hidden" name="filtro" value="VEICULO">
+
                         <div class="botoes" id="botoes">
                             <input type="reset" value="CANCELAR" name="Limpar" id="limparJ" class="botaoJ">
                             <input type="submit" value="ENVIAR" name="enviar" id="enviarJ" class="botaoJ">
@@ -66,7 +68,8 @@
                         <div class="campo">
                             <label for="cnhJ">CNH</label><br> 
                             <input type="text" name="cnh" id="cnhJ" ><span id="x_cnhJ" class="tSpan"></span>
-                        </div>
+                        </div>                        
+                        <input type="hidden" name="filtro" value="MOTORISTA">
                         <div class="botoes" id="botoes">
                             <input type="reset" value="CANCELAR" name="Limpar" id="limparJ" class="botaoJ">
                             <input type="submit" value="ENVIAR" name="enviar" id="enviarJ" class="botaoJ">
@@ -85,6 +88,7 @@
                             <label for="rntrcJ">RNTRC</label><br> 
                             <input type="text" name="rntrc" id="rntrcJ"><span id="x_rntrcJ" class="tSpan"></span>
                         </div>
+                        <input type="hidden" name="filtro" value="TRANSPORTADOR">
                         <div class="botoes" id="botoes">
                             <input type="reset" value="CANCELAR" name="Limpar" id="limparJ" class="botaoJ">
                             <input type="submit" value="ENVIAR" name="enviar" id="enviarJ" class="botaoJ">
@@ -99,6 +103,7 @@
                             <label for="nomeJ">Nome</label><br> 
                             <input type="text" name="nome" id="nomeJ" class="iLetras"><span id="x_nomeJ" class="tSpan"></span>
                         </div>
+                        <input type="hidden" name="filtro" value="PESSOA_JURIDICA">
                         <div class="botoes" id="botoes">
                             <input type="reset" value="CANCELAR" name="Limpar" id="limparJ" class="botaoJ">
                             <input type="submit" value="ENVIAR" name="enviar" id="enviarJ" class="botaoJ">
@@ -117,6 +122,7 @@
                             <label for="destinatarioJ">Destinatário</label><br> 
                             <input type="text" name="destinatario" id="destinatarioJ"><span id="x_destinatarioJ" class="tSpan"></span>
                         </div>
+                        <input type="hidden" name="filtro" value="CARGA">
                         <div class="botoes" id="botoes">
                             <input type="reset" value="CANCELAR" name="Limpar" id="limparJ" class="botaoJ">
                             <input type="submit" value="ENVIAR" name="enviar" id="enviarJ" class="botaoJ">
@@ -131,6 +137,7 @@
                             <label for="nomeJ">Nome</label><br> 
                             <input type="text" name="nome" id="nomeJ"><span id="x_nomeJ" class="tSpan"></span>
                         </div>
+                        <input type="hidden" name="filtro" value="PESSOA_FISICA">
                         <div class="botoes" id="botoes">
                             <input type="reset" value="CANCELAR" name="Limpar" id="limparJ" class="botaoJ">
                             <input type="submit" value="ENVIAR" name="enviar" id="enviarJ" class="botaoJ">
@@ -155,6 +162,7 @@
                             <label for="ateJ">Até</label><br> 
                             <input type="text" name="ate" id="ateJ"><span id="x_ateJ" class="tSpan"></span>
                         </div>
+                        <input type="hidden" name="filtro" value="FRETE">
                         <div class="botoes" id="botoes">
                             <input type="reset" value="CANCELAR" name="Limpar" id="limparJ" class="botaoJ">
                             <input type="submit" value="ENVIAR" name="enviar" id="enviarJ" class="botaoJ">
@@ -162,12 +170,26 @@
                     </form>
 
                     <!-- ===== CFOREACH REMOVER ======= -->
+                    <table>                       
                     <c:forEach var="veiculo" items="${Veiculos}">
                         <tr>
+                            <td>${veiculo.idVeiculo}</td>
                             <td>${veiculo.placa}</td>
+                            <td>${veiculo.renavam}</td>
+                            <td>${veiculo.anoDeFabricacao}</td>
+                            <td>${veiculo.tipo}</td>
+                            <td>${veiculo.modelo}</td>
+                            <td>${veiculo.marca}</td>
+                            <td>${veiculo.numEixos}</td>
+                            <td>${veiculo.tara}</td>
+                            <td>${veiculo.cmt}</td>
+                            <td>${veiculo.pbt}</td>
+                            <td>${veiculo.cidade}</td>
                             <td>${veiculo.uf}</td>
+                            <td>${veiculo.situacao}</td>
                         </tr> 
                     </c:forEach>
+                    </table>
                     <!-- ===== CFOREACH REMOVER ======= -->
 
                     <!-- ===== NÃO EDITE A PARTIR DAQUI =========================================-->

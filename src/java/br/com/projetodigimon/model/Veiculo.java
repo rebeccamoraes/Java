@@ -12,6 +12,8 @@ package br.com.projetodigimon.model;
 public class Veiculo {
 
     private long idVeiculo;
+    private char situacao;
+    private String cidade;
     private String uf;
     private String placa;
     private String renavam;
@@ -141,4 +143,21 @@ public class Veiculo {
         this.transportador = transportador;
     }
 
+    public String getCidade() {
+        return cidade;
+    }
+
+    public void setCidade(String cidade) {
+        this.cidade = cidade;
+    }
+
+    public char getSituacao() {
+        return situacao;
+    }
+
+    public void setSituacao(char situacao) {
+        this.situacao = situacao;
+    }
+
+    
 }
