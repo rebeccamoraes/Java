@@ -6,6 +6,7 @@ html {
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
+    overflow-y:hidden;
 }
 
 #titlePag{
@@ -20,21 +21,28 @@ html, body{
     font-size: 15px;
     line-height: normal;
 }
-
+/* ----- Inicio da tela sobre ----*/
 .sobre {
-
-    width: 744px;
-    height: 272px;
+    width: auto;
+    height: auto;
     margin-left: 0px;
-    text-align: justify;
-    overflow: hidden;
+    text-align: justify;    
     background: #000 none repeat scroll 0% 0%;
     float: left;
-    padding-right: 310px;
-    padding-left: 27px;
-    padding-top: 23px;
-    opacity: 0.7;
+    margin-right:150px;
+    padding:20px;
+    margin-left:10px;
+    margin-top:10px;
+    opacity: 0.7;    
+    font-size:19px;
 }
+
+#nospace p{
+    margin-bottom:0px !important;
+    text-indent: 20px;  
+}
+
+/* =========== fim da tela sobre =============*/
 
 /*TODO O Conteudo*/
 
@@ -160,7 +168,7 @@ element.style {
 }
 
 .home p{
-    margin-bottom:60px;
+    margin-bottom:60px;    
 }
 
 .home .saibaMais{
