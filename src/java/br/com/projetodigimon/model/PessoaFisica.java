@@ -12,7 +12,16 @@ public class PessoaFisica {
     private Contato contato;
     private Endereco endereco;
     private String sexo;
+    private char situacao;
 
+    public char getSituacao() {
+        return situacao;
+    }
+
+    public void setSituacao(char situacao) {
+        this.situacao = situacao;
+    }  
+    
     public String getSexo() {
         return sexo;
     }

@@ -21,7 +21,7 @@ public class Veiculo {
     private String modelo;
     private String marca;
     private String anoDeFabricacao;
-    private int numEixos;
+    private String numEixos;
     private float tara;
     private float cmt;
     private float pbt;
@@ -103,11 +103,11 @@ public class Veiculo {
         this.anoDeFabricacao = anoDeFabricacao;
     }
 
-    public int getNumEixos() {
+    public String getNumEixos() {
         return numEixos;
     }
 
-    public void setNumEixos(int numEixos) {
+    public void setNumEixos(String numEixos) {
         this.numEixos = numEixos;
     }
 

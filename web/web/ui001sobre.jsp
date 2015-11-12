@@ -21,26 +21,28 @@
             <%@ include file="headerhome.jsp" %>  
             <!-- end header -->
 
-		<div id="main">
-			<div class="centro">
-			
-						<!-- =======================NÃO EDITE ACIMA ====================-->
-			
-				<h2>Sobre o Sistema</h2>
-			
-				<div class="sobre">
-				O DigiMon é uma empresa de prestação de serviços de fiscalização dos transportes de cargas que circulam por vias federais,<br> permitindo o acesso a informações aos usuários previamente cadastrados através de login. Irá também monitorar todos os tipos de veículos que trafegam nas rodovias federais e estaduais do Brasil, incluindo carros de passeio, ônibus, e caminhões. Utilizando câmeras identificadoras de placas nos pontos estratégicos das rodovias, com o objetivo de fornecer estimativas de tráfego periódicas, oferecendo segurança complementar ao seguro do veículo, cobrindo o que existe de mais importante tanto para pessoas como empresas que é a vida do passageiro e a carga.
-	A alteração de informações no banco de dados do sistema será limitada de acordo com o grau hierárquico dos usuários, oferecendo níveis de segurança de forma que pessoas não autorizadas não tenham acesso ao sistema.<br>
-	Pensando na segurança do mercado corporativo e no mercado doméstico, criou pacotes de soluções para auxiliar a segurança do condutor e da carga, com um sistema que fiscaliza o transporte de cargas, permitindo o simples controle de rota.
-	Infelizmente a violência não escolhe hora ou local para acontecer, portanto não seja mais uma vítima indefesa, cadastre-se no nosso sistema e comprove. 
-				</div>
-			
-			
-			<!-- ===== NÃO EDITE A PARTIR DAQUI =========================================-->
-			
-			</div><!--Fim div centro-->		
-			<div id="clear"></div><!--Fim div clear-->
-		</div><!--Fim div main conteúdo-->	
+            <div id="main">
+                <div class="centro">
+
+                    <!-- =======================NÃO EDITE ACIMA ====================-->
+
+                    <h2>Sobre o Sistema</h2>
+
+                    <div class="sobre">
+                        <div id="nospace">
+                        <p id="nospace">O DigiMon é uma empresa de prestação de serviços de fiscalização dos transportes de cargas que circulam por vias federais, permitindo o acesso a informações aos usuários previamente cadastrados através de login. Irá também monitorar todos os tipos de veículos que trafegam nas rodovias federais e estaduais do Brasil, incluindo carros de passeio, ônibus, e caminhões. Utilizando câmeras identificadoras de placas nos pontos estratégicos das rodovias, com o objetivo de fornecer estimativas de tráfego periódicas, oferecendo segurança complementar ao seguro do veículo, cobrindo o que existe de mais importante tanto para pessoas como empresas que é a vida do passageiro e a carga.
+                        </p><p>A alteração de informações no banco de dados do sistema será limitada de acordo com o grau hierárquico dos usuários, oferecendo níveis de segurança de forma que pessoas não autorizadas não tenham acesso ao sistema.<br>
+                        Pensando na segurança do mercado corporativo e no mercado doméstico, criou pacotes de soluções para auxiliar a segurança do condutor e da carga, com um sistema que fiscaliza o transporte de cargas, permitindo o simples controle de rota.
+                        Infelizmente a violência não escolhe hora ou local para acontecer, portanto não seja mais uma vítima indefesa, cadastre-se no nosso sistema e comprove.</p>
+                        </div>
+                    </div>
+
+
+                    <!-- ===== NÃO EDITE A PARTIR DAQUI =========================================-->
+
+                </div><!--Fim div centro-->		
+                <div id="clear"></div><!--Fim div clear-->
+            </div><!--Fim div main conteúdo-->	
             <div id="rodape">
                 <div class="main">
                     <div id="footer">

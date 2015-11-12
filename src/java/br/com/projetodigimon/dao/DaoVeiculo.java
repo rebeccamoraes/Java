@@ -40,11 +40,11 @@ public class DaoVeiculo {
                 veiculo.setModelo(rs.getString("modelo"));
                 veiculo.setMarca(rs.getString("marca"));
                 //O numeixos Estava int na model, mudar para String? 
-                veiculo.setNumEixos(Integer.parseInt(rs.getString("numeixos")));
+                veiculo.setNumEixos(rs.getString("numeixos"));
                 veiculo.setTara(rs.getFloat("tara"));
                 veiculo.setCmt(rs.getFloat("cmt"));
                 veiculo.setPbt(rs.getFloat("pbt"));
-                //veiculo.setCidade(rs.getString("cidade"));
+                veiculo.setCidade(rs.getString("cidade"));
                 veiculo.setSituacao(rs.getString("situacao").charAt(0));
 
                 lista.add(veiculo);					//Adicionando os valores para a variável lista
