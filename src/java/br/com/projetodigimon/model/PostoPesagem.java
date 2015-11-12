@@ -3,7 +3,6 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-
 package br.com.projetodigimon.model;
 
 /**
@@ -11,10 +10,11 @@ package br.com.projetodigimon.model;
  * @author Javapos
  */
 public class PostoPesagem {
+
     private int idPosto;
     private int km;
-    private String latitude;
-    private String longitude;
+    private float latitude;
+    private float longitude;
 
     public int getKm() {
         return km;
@@ -24,19 +24,19 @@ public class PostoPesagem {
         this.km = km;
     }
 
-    public String getLatitude() {
+    public float getLatitude() {
         return latitude;
     }
 
-    public void setLatitude(String latitude) {
+    public void setLatitude(float latitude) {
         this.latitude = latitude;
     }
 
-    public String getLongitude() {
+    public float getLongitude() {
         return longitude;
     }
 
-    public void setLongitude(String longitude) {
+    public void setLongitude(float longitude) {
         this.longitude = longitude;
     }
 

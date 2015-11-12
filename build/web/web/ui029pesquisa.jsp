@@ -59,6 +59,29 @@
                             <input type="reset" value="CANCELAR" name="Limpar" id="limparJ" class="botaoJ">
                             <input type="submit" value="ENVIAR" name="enviar" id="enviarJ" class="botaoJ">
                         </div>
+                        <fieldset>
+                            <legend></legend>
+                        </fieldset>    
+                        <!-- ===== CFOREACH REMOVER ======= -->
+                        <table  id="tblConsulta">       
+                            <tr>                      
+                                <td class="cabecalh">Placa</td>
+                                <td class="cabecalh">Renavam</td>                     
+                                <td class="cabecalh">Tipo</td>
+                                <td class="cabecalh">Modelo</td>                            
+                                <td class="cabecalh">Numero de eixos</td>                           
+                            </tr>
+                            <c:forEach var="veiculo" items="${Veiculos}">
+                                <tr>                        
+                                    <td>${veiculo.placa}</td>
+                                    <td>${veiculo.renavam}</td>                       
+                                    <td>${veiculo.tipo}</td>
+                                    <td>${veiculo.modelo}</td>                           
+                                    <td>${veiculo.numEixos}</td>
+                                </tr> 
+                            </c:forEach>
+                        </table>
+                        <!-- ===== CFOREACH REMOVER ======= -->
                     </form>
                     <form action="ServletUI029" method="post" id="formMotorista" class="formularioP">
                         <div class="campo">
@@ -100,8 +123,8 @@
                             <input type="text" name="cnpj" id="cnpjJ"><span id="x_cnpjJ" class="tSpan"></span>
                         </div>    
                         <div class="campo">
-                            <label for="nomeJ">Nome</label><br> 
-                            <input type="text" name="nome" id="nomeJ" class="iLetras"><span id="x_nomeJ" class="tSpan"></span>
+                            <label for="nomeJ">Nome Fantasia</label><br> 
+                            <input type="text" name="nomeFantasia" id="nomeFantasiaJ" class="iLetras"><span id="x_nomeJ" class="tSpan"></span>
                         </div>
                         <input type="hidden" name="filtro" value="PESSOA_JURIDICA">
                         <div class="botoes" id="botoes">
@@ -142,6 +165,26 @@
                             <input type="reset" value="CANCELAR" name="Limpar" id="limparJ" class="botaoJ">
                             <input type="submit" value="ENVIAR" name="enviar" id="enviarJ" class="botaoJ">
                         </div>
+                        <!-- ===== CFOREACH REMOVER ======= -->
+                        <table  id="tblConsulta">       
+                            <tr>                      
+                                <td class="cabecalh">Nome completo</td>
+                                <td class="cabecalh">CPF</td>                     
+                                <td class="cabecalh">Data de Nascimento</td>
+                                <td class="cabecalh">RG</td>                            
+                                <td class="cabecalh">Sexo</td>                           
+                            </tr>
+                            <c:forEach var="pf" items="${Pessoasf}">
+                                <tr>                        
+                                    <td>${pf.nome}</td>
+                                    <td>${pf.cpf}</td>                       
+                                    <td>${pf.dataNascimento}</td>
+                                    <td>${pf.rg}</td>                           
+                                    <td>${pf.sexo}</td>
+                                </tr> 
+                            </c:forEach>
+                        </table>
+                        <!-- ===== CFOREACH REMOVER ======= -->
                     </form>
                     <form action="ServletUI029" method="post" id="formProduto" class="formularioP">
                         <div class="campo">
@@ -168,50 +211,10 @@
                             <input type="submit" value="ENVIAR" name="enviar" id="enviarJ" class="botaoJ">
                         </div>
                     </form>
-                 
+
 
                     <!-- ===== NÃO EDITE A PARTIR DAQUI =========================================-->
-                    <fieldset>
-                        <legend></legend>
-                    </fieldset>    
-                       <!-- ===== CFOREACH REMOVER ======= -->
-                    <table  id="tblConsulta">       
-                        <tr>
-                            <td class="cabecalh">Id Veiculo</td>
-                            <td class="cabecalh">Placa</td>
-                            <td class="cabecalh">Renavam</td>
-                            <td class="cabecalh">Ano de Fabricação</td>
-                            <td class="cabecalh">Tipo</td>
-                            <td class="cabecalh">Modelo</td>
-                            <td class="cabecalh">Marca</td>
-                            <td class="cabecalh">Numero de eixos</td>
-                            <td class="cabecalh">Tara</td>
-                            <td class="cabecalh">CMT</td>
-                            <td class="cabecalh">PBT</td>
-                            <td class="cabecalh">Cidade</td>
-                            <td class="cabecalh">UF</td>
-                            <td class="cabecalh">Situação</td>
-                        </tr>
-                    <c:forEach var="veiculo" items="${Veiculos}">
-                        <tr>
-                            <td >${veiculo.idVeiculo}</td>
-                            <td>${veiculo.placa}</td>
-                            <td>${veiculo.renavam}</td>
-                            <td>${veiculo.anoDeFabricacao}</td>
-                            <td>${veiculo.tipo}</td>
-                            <td>${veiculo.modelo}</td>
-                            <td>${veiculo.marca}</td>
-                            <td>${veiculo.numEixos}</td>
-                            <td>${veiculo.tara}</td>
-                            <td>${veiculo.cmt}</td>
-                            <td>${veiculo.pbt}</td>
-                            <td>${veiculo.cidade}</td>
-                            <td>${veiculo.uf}</td>
-                            <td>${veiculo.situacao}</td>
-                        </tr> 
-                    </c:forEach>
-                    </table>
-                    <!-- ===== CFOREACH REMOVER ======= -->
+
                 </div>
                 <div id="clear"></div>
             </div>

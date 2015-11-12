@@ -40,8 +40,8 @@ public class ServletUI018 extends HttpServlet {
         
         try {
         pp.setKm(Integer.parseInt(request.getParameter("km")));
-        pp.setLatitude(request.getParameter("latitude"));
-        pp.setLongitude(request.getParameter("longitude"));
+        pp.setLatitude(Float.parseFloat(request.getParameter("latitude")));
+        pp.setLongitude(Float.parseFloat(request.getParameter("longitude")));
         
         DaoPosto dp = new DaoPosto();
         dp.inserir(pp);

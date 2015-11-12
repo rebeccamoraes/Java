@@ -4,6 +4,7 @@
     Author     : Luiz
 --%>
 
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE HTML>
 <html lang="pt-br">
@@ -25,8 +26,15 @@
                 <div class="centro">
 
                     <!-- =======================NÃO EDITE ACIMA ====================-->
+                    <c:choose>
+                        <c:when test="${ us eq null }">
+                            <jsp:forward page="inicio.jsp" />
+                        </c:when>
+                        <c:otherwise>
+                            <h1>Seja Bem-Vindo!</h1>
+                        </c:otherwise>
+                    </c:choose>
 
-                    <h1>Seja Bem-Vindo!</h1>
 
                     <!-- ===== NÃO EDITE A PARTIR DAQUI =========================================-->
 

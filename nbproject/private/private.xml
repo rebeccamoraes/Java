@@ -2,6 +2,15 @@
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
-        <group/>
+        <group>
+            <file>file:/C:/Users/Higor/Desktop/ForsfotTelas/Java/Java/src/java/br/com/projetodigimon/dao/DaoVeiculo.java</file>
+            <file>file:/C:/Users/Higor/Desktop/ForsfotTelas/Java/Java/web/web/ui029pesquisa.jsp</file>
+            <file>file:/C:/Users/Higor/Desktop/ForsfotTelas/Java/Java/src/java/br/com/projetodigimon/controller/ServletUI029.java</file>
+            <file>file:/C:/Users/Higor/Desktop/ForsfotTelas/Java/Java/src/java/br/com/projetodigimon/dao/ConnectionFactory.java</file>
+            <file>file:/C:/Users/Higor/Desktop/ForsfotTelas/Java/Java/src/java/br/com/projetodigimon/model/Veiculo.java</file>
+            <file>file:/C:/Users/Higor/Desktop/ForsfotTelas/Java/Java/src/java/br/com/projetodigimon/dao/DaoPosto.java</file>
+            <file>file:/C:/Users/Higor/Desktop/ForsfotTelas/Java/Java/src/java/br/com/projetodigimon/model/PostoPesagem.java</file>
+            <file>file:/C:/Users/Higor/Desktop/ForsfotTelas/Java/Java/src/java/br/com/projetodigimon/controller/ServletUI018.java</file>
+        </group>
     </open-files>
 </project-private>
