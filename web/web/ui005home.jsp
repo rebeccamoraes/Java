@@ -4,6 +4,7 @@
     Author     : Luiz
 --%>
 
+<%@page import="br.com.projetodigimon.model.Acesso"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE HTML>
@@ -20,8 +21,6 @@
             <!-- begin header -->
             <%@ include file="header.jsp" %>  
             <!-- end header -->
-
-
             <div id="main">
                 <div class="centro">
 
@@ -31,7 +30,7 @@
                             <jsp:forward page="inicio.jsp" />
                         </c:when>
                         <c:otherwise>
-                            <h1>Seja Bem-Vindo!</h1>
+                            <h1 id="bemVindo">Seja Bem-Vindo <c:out value="${us.usuario}"/>!</h1>
                         </c:otherwise>
                     </c:choose>
 

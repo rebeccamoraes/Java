@@ -31,11 +31,11 @@
                         <div class="campo" id="principal"> 
                             <label for="pesquisaJ">Pesquisar Por</label><br> 
                             <select id="pesquisaJ" name="pesquisa"> 
-                                <option selected>Selecione</option>
+                                <option >Selecione</option>
                                 <option value="VEICULO">Veículo</option>
                                 <option value="TRANSPORTADOR">Transportador</option>
                                 <option value="PESSOA_JURIDICA">Pessoa Jurídica</option>
-                                <option value="PESSOA_FISICA">Pessoa Física</option>
+                                <option selected value="PESSOA_FISICA">Pessoa Física</option>
                                 <option value="MOTORISTA">Motorista</option>
                                 <option value="CARGA">Carga</option>
                                 <option value="PRODUTO">Produto</option>

@@ -24,7 +24,7 @@
                     <!-- =======================NÃO EDITE ACIMA ====================-->
 
                     <img src="dist/imagens/iconeLogin.png" alt="Icone Login" class="iconeLogin"/>
-                    <form name="form" method="post" action="LoginServlet" id="formularioJJ" class="formulario">
+                    <form name="form" method="post" action="ServletAcesso" id="formularioJJ" class="formulario">
                         <div class="campo"> 
                             <input type="text" name="usuario" placeholder="usuario" id="usuarioJ" required><span id="x_usuarioJ" class="tSpan"></span></br>
                         </div></br>

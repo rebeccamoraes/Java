@@ -19,7 +19,7 @@ public class ConnectionFactory {
 
         try {
             Class.forName("oracle.jdbc.driver.OracleDriver");
-            return DriverManager.getConnection("jdbc:oracle:thin:@192.168.10.15:1521:forsoft", "system", "123");
+            return DriverManager.getConnection("jdbc:oracle:thin:@10.2.12.37:1521:forsoft", "system", "123");
         } catch (SQLException e) {
             throw new RuntimeException(e + " Erro 666: Miguel ferrou o DNS");
         }

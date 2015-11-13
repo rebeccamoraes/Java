@@ -1,4 +1,4 @@
-_$("pesquisaJ").onchange = function x (){
+window.onload = function x (){
     pesquisa = _$("pesquisaJ").value;
    if(pesquisa == "VEICULO"){
         aparece("formVeiculo");   
