@@ -15,6 +15,9 @@
                 </library>
                 <library dirs="200">
                     <file>${libs.jstl.classpath}</file>
+                </library>
+                <library dirs="200">
+                    <file>${file.reference.jstl-1.2.jar}</file>
                     <path-in-war>WEB-INF/lib</path-in-war>
                 </library>
                 <library dirs="200">
