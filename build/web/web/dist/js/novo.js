@@ -425,10 +425,11 @@ _$("formularioJ").onsubmit = function(e){
 			} 
 			
 		}	
-	}if (!err) {
-		alert("Dados cadastrados com sucesso!");
 	}
 }
+if (!err) {
+		alert("Dados cadastrados com sucesso!");
+	}
 }
 
 /*_$("limparJ").onclick = function limpo(campo) { 
