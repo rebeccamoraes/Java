@@ -251,8 +251,7 @@
                             <input type="reset" value="CANCELAR" name="Limpar" id="limparJ" class="botaoJ">
                             <input type="submit" value="ENVIAR" name="enviar" id="enviarJ" class="botaoJ">
                         </div>
-                    </form>
-
+                    </form>                    
 
                     <!-- ===== NÃO EDITE A PARTIR DAQUI =========================================-->
 
