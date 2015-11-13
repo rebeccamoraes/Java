@@ -150,6 +150,25 @@
                             <input type="reset" value="CANCELAR" name="Limpar" id="limparJ" class="botaoJ">
                             <input type="submit" value="ENVIAR" name="enviar" id="enviarJ" class="botaoJ">
                         </div>
+                        <fieldset>
+                            <legend></legend>
+                        </fieldset>    
+                        <!-- ===== CFOREACH REMOVER ======= -->
+                        <table  id="tblConsulta">       
+                            <tr>                      
+                                <td class="cabecalh">Tipo</td>
+                                <td class="cabecalh">Remetente</td>                     
+                                <td class="cabecalh">Destinatário</td>                                  
+                            </tr>
+                            <c:forEach var="carga" items="${Cargas}">
+                                <tr>                        
+                                    <td>${carga.tipo}</td>
+                                    <td>${carga.remetente}</td>                       
+                                    <td>${carga.destinatario}</td>                                    
+                                </tr> 
+                            </c:forEach>
+                        </table>
+                    </form>
                     </form>
                     <form action="ServletUI029" method="post" id="formPF" class="formularioP">
                         <div class="campo">
@@ -191,6 +210,28 @@
                             <label for="mercadoriaJ">Mercadoria</label><br> 
                             <input type="text" name="mercadoria" id="mercadoriaJ"><span id="x_mercadoriaJ" class="tSpan"></span>
                         </div>    
+                        <div class="botoes" id="botoes">
+                            <input type="reset" value="CANCELAR" name="Limpar" id="limparJ" class="botaoJ">
+                            <input type="submit" value="ENVIAR" name="enviar" id="enviarJ" class="botaoJ">
+                        </div>
+                        <input type="hidden" name="filtro" value="PRODUTO">
+                            <legend></legend>
+                        </fieldset>    
+                        <!-- ===== CFOREACH REMOVER ======= -->
+                        <table  id="tblConsulta">       
+                            <tr>                      
+                                <td class="cabecalh">Mercadoria</td>
+                                <td class="cabecalh">Peso Total</td>                     
+                                <td class="cabecalh">Valor Total</td>                                  
+                            </tr>
+                            <c:forEach var="produto" items="${Produtos}">
+                                <tr>                        
+                                    <td>${produto.mercadoria}</td>
+                                    <td>${produto.pesototal}</td>                       
+                                    <td>${produto.valortotal}</td>                                    
+                                </tr> 
+                            </c:forEach>
+                        </table>
                     </form>
                     <form action="ServletUI029" method="post" id="formFrete" class="formularioP">
                         <div class="campo">

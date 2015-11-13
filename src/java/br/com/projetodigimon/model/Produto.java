@@ -3,7 +3,6 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-
 package br.com.projetodigimon.model;
 
 /**
@@ -11,11 +10,21 @@ package br.com.projetodigimon.model;
  * @author Javapos
  */
 public class Produto {
+
     private long idProduto;
     private String mercadoria;
     private float pesoTotal;
     private float valorTotal;
     private Carga carga;
+    private char situacao;
+
+    public char getSituacao() {
+        return situacao;
+    }
+
+    public void setSituacao(char situacao) {
+        this.situacao = situacao;
+    }
 
     public long getIdProduto() {
         return idProduto;
@@ -56,6 +65,5 @@ public class Produto {
     public void setCarga(Carga carga) {
         this.carga = carga;
     }
-    
-    
+
 }

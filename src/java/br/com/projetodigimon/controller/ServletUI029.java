@@ -5,14 +5,16 @@
  */
 package br.com.projetodigimon.controller;
 
+import br.com.projetodigimon.dao.DaoCarga;
 import br.com.projetodigimon.dao.DaoPessoaFisica;
+import br.com.projetodigimon.dao.DaoProduto;
 import br.com.projetodigimon.dao.DaoVeiculo;
 import br.com.projetodigimon.model.Carga;
 import br.com.projetodigimon.model.Frete;
 import br.com.projetodigimon.model.MotoristaPesquisaBean;
 import br.com.projetodigimon.model.PessoaFisica;
 import br.com.projetodigimon.model.PessoaJuridicaPesquisaBean;
-import br.com.projetodigimon.model.ProdutoPesquisaBean;
+import br.com.projetodigimon.model.Produto;
 import br.com.projetodigimon.model.TransportadorPesquisaBean;
 import br.com.projetodigimon.model.Veiculo;
 import java.io.IOException;
@@ -71,15 +73,21 @@ public class ServletUI029 extends HttpServlet {
 
         //Carga (usei a entidade inteira)
         Carga carga = new Carga();
+        DaoCarga daoCarga = new DaoCarga();
+        List<Carga> listaCarga = new ArrayList<Carga>();
 
         //Produto 
-        ProdutoPesquisaBean produto = new ProdutoPesquisaBean();
+        //ProdutoPesquisaBean produto = new ProdutoPesquisaBean();
+        Produto produto = new Produto();
+        List<Produto> listaProduto = new ArrayList<Produto>();
+        DaoProduto daoProduto = new DaoProduto();
 
         //Frete  (usei a entidade inteira)
         Frete frete = new Frete();
         try {
             if (filtro.equalsIgnoreCase("VEICULO")) {
                 veiculo.setPlaca(request.getParameter("placa"));
+
                 listaVeiculo = daoVeiculo.listar(veiculo);  //Atribuindo a instância de listVeiculo o método daoveiculo.listar
                 request.setAttribute("Veiculos", listaVeiculo); //Atribuindo uma lista de nome "Veiculos" os resultados de listaVeiculo
 
@@ -97,6 +105,7 @@ public class ServletUI029 extends HttpServlet {
             } else if (filtro.equalsIgnoreCase("PESSOA_FISICA")) {
                 pf.setCpf(request.getParameter("cpf"));
                 pf.setNome(request.getParameter("nome"));
+
                 listaPessoaFisica = daoPessoaF.listar(pf);
                 request.setAttribute("Pessoasf", listaPessoaFisica);
 
@@ -108,10 +117,15 @@ public class ServletUI029 extends HttpServlet {
                 carga.setTipo(request.getParameter("tipo"));
                 carga.setRemetente(request.getParameter("remetente"));
                 carga.setDestinatario(request.getParameter("destinatario"));
+
+                listaCarga = daoCarga.listar(carga);
+                request.setAttribute("Cargas", listaCarga);
                 //inserir dao.listar + try catch
 
             } else if (filtro.equalsIgnoreCase("PRODUTO")) {
                 produto.setMercadoria(request.getParameter("mercadoria"));
+                listaProduto = daoProduto.listar(produto);
+                request.setAttribute("Produtos", listaProduto);
                 //inserir dao.listar + try catch
 
             } else if (filtro.equalsIgnoreCase("FRETE")) {
