@@ -13,6 +13,11 @@ html {
     display:none;
 }
 
+a{
+    text-decoration:none ;
+    color:#FFF;
+}
+
 
 html, body{
     height: 100%;
@@ -187,12 +192,12 @@ element.style {
     text-align: center;
 }
 
-.login #formularioJ{
+.login #formularioJJ{
     margin:0 auto;
     text-align: center;
 }
 
-.login #formularioJ input[type=text], [type=password] {
+.login #formularioJJ input[type=text], [type=password] {
     height: 29px !important;
     width: 279px;
 }
@@ -509,12 +514,7 @@ user agent stylesheetkeygen, select {
     font: 12px verdana, arial, sans-serif;
     text-transform: none;
 }
-
 /*fim placeholder*/
-
-input #dataJ .campoObrig {
-
-}
 
 fieldset {
     border: none;
@@ -529,6 +529,24 @@ legend {
 }
 
 #formularioJ input{
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    border: 1px solid #c2c2c2;
+    font-size: 16px;
+    padding: 4px;
+    height:21px;
+}
+
+textarea{
+        -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    border: 1px solid #c2c2c2;
+    font-size: 16px;
+}
+
+#formularioJJ input{
     -webkit-border-radius: 5px;
     -moz-border-radius: 5px;
     border-radius: 5px;
@@ -565,7 +583,7 @@ legend {
 
 .login #botoes {
     text-align: left;
-    right: -58px;
+    right: -262px;
     position: relative;
 }
 

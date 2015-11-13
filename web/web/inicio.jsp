@@ -25,7 +25,7 @@
                 <div class="centro" >
                     <div class="logo">
                         <img src="dist/imagens/teste.png"  id="logoo" alt="Logo"/><br>
-                        <span class="saibaMais">Saiba Mais</span>
+                        <span class="saibaMais"><a href="ui001sobre.jsp">Saiba Mais</a></span>
                     </div>
                 </div><!--Fim div centro-->		
                 <div id="clear"></div><!--Fim div clear-->

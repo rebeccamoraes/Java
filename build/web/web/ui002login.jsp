@@ -24,12 +24,12 @@
                     <!-- =======================NÃO EDITE ACIMA ====================-->
 
                     <img src="dist/imagens/iconeLogin.png" alt="Icone Login" class="iconeLogin"/>
-                    <form name="form" method="post" action="ServletAcesso" id="formularioJ" class="formulario">
+                    <form name="form" method="post" action="ServletAcesso" id="formularioJJ" class="formulario">
                         <div class="campo"> 
-                            <input type="text" name="usuario" placeholder="usuario" id="usuarioJ" class="campoObrig"><span id="x_usuarioJ" class="tSpan"></span></br>
+                            <input type="text" name="usuario" placeholder="usuario" id="usuarioJ" required><span id="x_usuarioJ" class="tSpan"></span></br>
                         </div></br>
                         <div class="campo">
-                            <input type="password" name="senha" placeholder="senha" id="senhaJ" class="campoObrig"><span id="x_senhaJ" class="tSpan"></span>
+                            <input type="password" name="senha" placeholder="senha" id="senhaJ" required><span id="x_senhaJ" class="tSpan"></span>
                         </div>
 
                         <div class="botoes" id="botoes">
