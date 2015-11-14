@@ -6,7 +6,6 @@
 package br.com.projetodigimon.dao;
 
 import br.com.projetodigimon.model.Pesagem;
-import br.com.projetodigimon.model.Rodovia;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
@@ -24,23 +23,37 @@ public class DaoPesagem {
         System.out.println("entrou no dao");
 
         String sql = "Insert into PESAGEM"
-                + " (IDPESAGEM, PBT, PESOEIXO, DATAHORA, TRANSBORDO, REMANEJAMENTO)"
-                + " VALUES (?,?,?,?,?,?)";
+                + " (PBT, PESOEIXO, DATAHORA, TRANSBORDO, REMANEJAMENTO)"
+                + " VALUES (?,?,?,?,?)";
 
         try {
             Connection con = new ConnectionFactory().getConnection();
             PreparedStatement stmt = con.prepareStatement(sql);
-            stmt.setInt(1, 44);
-            stmt.setFloat(2, this.pesagem.getPbt());
-            stmt.setFloat(3, this.pesagem.getPesoEixo());
-            stmt.setString(4, "01/12/1992");
-            stmt.setString(5, "1");
-            stmt.setString(6, "1");
-            
-            
+            //stmt.setInt(1, this.pesagem.getIdPesagem());
+            stmt.setFloat(1, this.pesagem.getPbt());
+            stmt.setFloat(2, this.pesagem.getPesoEixo());
+            stmt.setString(3, this.pesagem.getDataHora()); // Tipo Date?
+            stmt.setString(4, this.pesagem.getTransbordo());
+            stmt.setString(5, this.pesagem.getRemanejamento());
 
             stmt.executeUpdate();
             stmt.close();
+            con.close();
+
+            //SQL Server
+            Connection conS = new ConnectionFactory().getServer();
+            stmt = conS.prepareStatement(sql);
+            //stmt.setInt(1, this.pesagem.getIdPesagem());
+            stmt.setFloat(1, this.pesagem.getPbt());
+            stmt.setFloat(2, this.pesagem.getPesoEixo());
+            stmt.setString(3, this.pesagem.getDataHora()); // Tipo Date?
+            stmt.setString(4, this.pesagem.getTransbordo());
+            stmt.setString(5, this.pesagem.getRemanejamento());
+
+            stmt.executeUpdate();
+            stmt.close();
+            conS.close();
+
         } catch (SQLException e) {
             throw new RuntimeException(e + "Erro na Conexão");
         }
@@ -59,13 +72,29 @@ public class DaoPesagem {
 
             stmt.setFloat(1, this.pesagem.getPbt());
             stmt.setFloat(2, this.pesagem.getPesoEixo());
-            stmt.setString(3, "01/12/1992");
-            stmt.setString(4, "1");
-            stmt.setString(5, "1");
-            stmt.setInt(5, 44);
+            stmt.setString(3, this.pesagem.getDataHora());
+            stmt.setString(4, this.pesagem.getTransbordo());
+            stmt.setString(5, this.pesagem.getRemanejamento());
+            stmt.setInt(6, this.pesagem.getIdPesagem());
 
             stmt.executeUpdate();
             stmt.close();
+            con.close();
+
+            //SQL Server
+            Connection conS = new ConnectionFactory().getServer();
+            stmt = conS.prepareStatement(sql);
+
+            stmt.setFloat(1, this.pesagem.getPbt());
+            stmt.setFloat(2, this.pesagem.getPesoEixo());
+            stmt.setString(3, this.pesagem.getDataHora());
+            stmt.setString(4, this.pesagem.getTransbordo());
+            stmt.setString(5, this.pesagem.getRemanejamento());
+            stmt.setInt(6, this.pesagem.getIdPesagem());
+
+            stmt.executeUpdate();
+            stmt.close();
+            conS.close();
 
         } catch (SQLException e) {
             throw new RuntimeException(e + "Erro na Conexão");
@@ -82,10 +111,21 @@ public class DaoPesagem {
             Connection con = new ConnectionFactory().getConnection();
             PreparedStatement stmt = con.prepareStatement(sql);
 
-            stmt.setInt(1, 44);
+            stmt.setInt(1, this.pesagem.getIdPesagem());
 
             stmt.executeUpdate();
             stmt.close();
+            con.close();
+
+            //SQL Server
+            Connection conS = new ConnectionFactory().getServer();
+            stmt = conS.prepareStatement(sql);
+
+            stmt.setInt(1, this.pesagem.getIdPesagem());
+
+            stmt.executeUpdate();
+            stmt.close();
+            conS.close();
         } catch (SQLException e) {
             throw new RuntimeException(e + "Erro na Conexão");
         }

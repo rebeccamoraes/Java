@@ -9,85 +9,127 @@ import br.com.projetodigimon.model.Rodovia;
  *
  * @author DarkBox
  */
-public class DaoRodovia{
+public class DaoRodovia {
+
     private Rodovia rodovia = new Rodovia();
-    
-    
-    public void inserir(Rodovia rodovia) throws ClassNotFoundException{
-        this.rodovia = rodovia;    
+
+    public void inserir(Rodovia rodovia) throws ClassNotFoundException {
+        this.rodovia = rodovia;
         System.out.println("entrou no dao");
 
-        String sql = "Insert into RODOVIA" + 
-                    " (IDRODOVIA, NOME, EXTENSAOKM, CIDADEINICIAL, UFINICIAL, CIDADEFINAL, UFFINAL, SITUACAO)"
-                    + " VALUES (?,?,?,?,?,?,?,?)";
-       
-         try{
-                Connection con = new ConnectionFactory().getConnection();
-                PreparedStatement stmt = con.prepareStatement(sql);
-                stmt.setInt(1, 44);
-                stmt.setString(2, this.rodovia.getNome());
-                stmt.setFloat(3, this.rodovia.getExtensaoKm());
-                stmt.setString(4, this.rodovia.getCidadeInicial());
-                stmt.setString(5, this.rodovia.getUfInicial());
-                stmt.setString(6, this.rodovia.getCidadeFinal());
-                stmt.setString(7, this.rodovia.getUfFinal());
-                stmt.setInt(8, 1);
+        String sql = "Insert into RODOVIA"
+                + " (NOME, EXTENSAOKM, CIDADEINICIAL, UFINICIAL, CIDADEFINAL, UFFINAL)"
+                + " VALUES (?,?,?,?,?,?)";
 
-                stmt.executeUpdate();
-                stmt.close();
-            }catch(SQLException e){
-                throw new RuntimeException(e + "Erro na Conexão" );
-            }
+        try {
+            Connection con = new ConnectionFactory().getConnection();
+            PreparedStatement stmt = con.prepareStatement(sql);
+            // stmt.setInt(1, this.rodovia.getIdRodovia());
+            stmt.setString(1, this.rodovia.getNome());
+            stmt.setFloat(2, this.rodovia.getExtensaoKm());
+            stmt.setString(3, this.rodovia.getCidadeInicial());
+            stmt.setString(4, this.rodovia.getUfInicial());
+            stmt.setString(5, this.rodovia.getCidadeFinal());
+            stmt.setString(6, this.rodovia.getUfFinal());
+            //stmt.setInt(8, this.rodovia.getSituacao().charAt(0));
+
+            stmt.executeUpdate();
+            stmt.close();
+            con.close();
+
+            //SQL Server
+            Connection conS = new ConnectionFactory().getServer();
+            stmt = conS.prepareStatement(sql);
+            // stmt.setInt(1, this.rodovia.getIdRodovia());
+            stmt.setString(1, this.rodovia.getNome());
+            stmt.setFloat(2, this.rodovia.getExtensaoKm());
+            stmt.setString(3, this.rodovia.getCidadeInicial());
+            stmt.setString(4, this.rodovia.getUfInicial());
+            stmt.setString(5, this.rodovia.getCidadeFinal());
+            stmt.setString(6, this.rodovia.getUfFinal());
+            //stmt.setInt(8, this.rodovia.getSituacao().charAt(0));
+
+            stmt.executeUpdate();
+            stmt.close();
+            conS.close();
+        } catch (SQLException e) {
+            throw new RuntimeException(e + "Erro na Conexão");
+        }
     }
-    
-     public void alterar (Rodovia rodovia) throws ClassNotFoundException{
-        this.rodovia = rodovia;    
 
+    public void alterar(Rodovia rodovia) throws ClassNotFoundException {
+        this.rodovia = rodovia;
 
-        String sql = "update RODOVIA set" + 
-                    " NOME = ?, EXTENSAOKM = ?, CIDADEINICIAL = ?, UFINICIAL = ?, CIDADEFINAL = ?, UFFINAL = ?, SITUACAO = ?"
-                    + " where IDRODOVIA = ?";
-       
-         try{
-                Connection con = new ConnectionFactory().getConnection();
-                PreparedStatement stmt = con.prepareStatement(sql);
-              
-                stmt.setString(1, this.rodovia.getNome());
-                stmt.setFloat(2, this.rodovia.getExtensaoKm());
-                stmt.setString(3, this.rodovia.getCidadeInicial());
-                stmt.setString(4, this.rodovia.getUfInicial());
-                stmt.setString(5, this.rodovia.getCidadeFinal());
-                stmt.setString(6, this.rodovia.getUfFinal());
-                stmt.setInt(7, 0);
-                stmt.setInt(8, 68);
+        String sql = "update RODOVIA set"
+                + " NOME = ?, EXTENSAOKM = ?, CIDADEINICIAL = ?, UFINICIAL = ?, CIDADEFINAL = ?, UFFINAL = ?, SITUACAO = ?"
+                + " where IDRODOVIA = ?";
 
-                stmt.executeUpdate();
-                stmt.close();
-                
-            }catch(SQLException e){
-                throw new RuntimeException(e + "Erro na Conexão" );
-            }
+        try {
+            Connection con = new ConnectionFactory().getConnection();
+            PreparedStatement stmt = con.prepareStatement(sql);
+
+            stmt.setString(1, this.rodovia.getNome());
+            stmt.setFloat(2, this.rodovia.getExtensaoKm());
+            stmt.setString(3, this.rodovia.getCidadeInicial());
+            stmt.setString(4, this.rodovia.getUfInicial());
+            stmt.setString(5, this.rodovia.getCidadeFinal());
+            stmt.setString(6, this.rodovia.getUfFinal());
+            stmt.setInt(7, this.rodovia.getSituacao().charAt(0));
+            stmt.setInt(8, this.rodovia.getIdRodovia());
+
+            stmt.executeUpdate();
+            stmt.close();
+            con.close();
+
+            //SQO Server
+            Connection conS = new ConnectionFactory().getServer();
+            stmt = conS.prepareStatement(sql);
+
+            stmt.setString(1, this.rodovia.getNome());
+            stmt.setFloat(2, this.rodovia.getExtensaoKm());
+            stmt.setString(3, this.rodovia.getCidadeInicial());
+            stmt.setString(4, this.rodovia.getUfInicial());
+            stmt.setString(5, this.rodovia.getCidadeFinal());
+            stmt.setString(6, this.rodovia.getUfFinal());
+            stmt.setInt(7, this.rodovia.getSituacao().charAt(0));
+            stmt.setInt(8, this.rodovia.getIdRodovia());
+
+            stmt.executeUpdate();
+            stmt.close();
+            conS.close();
+
+        } catch (SQLException e) {
+            throw new RuntimeException(e + "Erro na Conexão");
+        }
     }
-     
-     public void excluir (Rodovia rodovia) throws ClassNotFoundException{
-        this.rodovia = rodovia;    
 
+    public void excluir(Rodovia rodovia) throws ClassNotFoundException {
+        this.rodovia = rodovia;
 
-        String sql = "delete from RODOVIA" + 
-                   " where IDRODOVIA = ?";
-       
-         try{
-                Connection con = new ConnectionFactory().getConnection();
-                PreparedStatement stmt = con.prepareStatement(sql);
-              
-                stmt.setInt(1, 26);
+        String sql = "delete from RODOVIA"
+                + " where IDRODOVIA = ?";
 
-                stmt.executeUpdate();
-                stmt.close();
-            }catch(SQLException e){
-                throw new RuntimeException(e + "Erro na Conexão" );
-            }
+        try {
+            Connection con = new ConnectionFactory().getConnection();
+            PreparedStatement stmt = con.prepareStatement(sql);
+
+            stmt.setInt(1, this.rodovia.getIdRodovia());
+
+            stmt.executeUpdate();
+            stmt.close();
+            con.close();
+
+            //SQL Server
+            Connection conS = new ConnectionFactory().getServer();
+            stmt = conS.prepareStatement(sql);
+
+            stmt.setInt(1, this.rodovia.getIdRodovia());
+
+            stmt.executeUpdate();
+            stmt.close();
+            conS.close();
+        } catch (SQLException e) {
+            throw new RuntimeException(e + "Erro na Conexão");
+        }
     }
-    
-    
 }

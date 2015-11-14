@@ -23,20 +23,32 @@ public class DaoBalanca {
         System.out.println("entrou no dao");
 
         String sql = "Insert into BAlANCA"
-                + " (IDBALANCA, NUMSERIE, FABRICANTE, MODELO)"
-                + " VALUES (?,?,?,?)";
+                + " (NUMSERIE, FABRICANTE, MODELO)"
+                + " VALUES (?,?,?)";
 
         try {
             Connection con = new ConnectionFactory().getConnection();
             PreparedStatement stmt = con.prepareStatement(sql);
-            stmt.setInt(1, 44);
-            stmt.setInt(2, this.balanca.getNumSerie());
-            stmt.setString(3, this.balanca.getFabricante());
-            stmt.setString(4, this.balanca.getModelo());
-           
+            //stmt.setInt(1, this.balanca.getIdBalanca());
+            stmt.setInt(1, this.balanca.getNumSerie());
+            stmt.setString(2, this.balanca.getFabricante());
+            stmt.setString(3, this.balanca.getModelo());
 
             stmt.executeUpdate();
             stmt.close();
+            con.close();
+
+            //SQL Server
+            Connection conS = new ConnectionFactory().getServer();
+            stmt = conS.prepareStatement(sql);
+            //stmt.setInt(1, this.balanca.getIdBalanca());
+            stmt.setInt(1, this.balanca.getNumSerie());
+            stmt.setString(2, this.balanca.getFabricante());
+            stmt.setString(3, this.balanca.getModelo());
+
+            stmt.executeUpdate();
+            stmt.close();
+            conS.close();
         } catch (SQLException e) {
             throw new RuntimeException(e + "Erro na Conexão");
         }
@@ -56,11 +68,24 @@ public class DaoBalanca {
             stmt.setInt(1, this.balanca.getNumSerie());
             stmt.setString(2, this.balanca.getFabricante());
             stmt.setString(3, this.balanca.getModelo());
-            stmt.setInt(4, 5);
-            
+            stmt.setInt(4, this.balanca.getIdBalanca());
 
             stmt.executeUpdate();
             stmt.close();
+            con.close();
+
+            //SQL Server
+            Connection conS = new ConnectionFactory().getServer();
+            stmt = conS.prepareStatement(sql);
+
+            stmt.setInt(1, this.balanca.getNumSerie());
+            stmt.setString(2, this.balanca.getFabricante());
+            stmt.setString(3, this.balanca.getModelo());
+            stmt.setInt(4, this.balanca.getIdBalanca());
+
+            stmt.executeUpdate();
+            stmt.close();
+            conS.close();
 
         } catch (SQLException e) {
             throw new RuntimeException(e + "Erro na Conexão");
@@ -77,10 +102,21 @@ public class DaoBalanca {
             Connection con = new ConnectionFactory().getConnection();
             PreparedStatement stmt = con.prepareStatement(sql);
 
-            stmt.setInt(1, 26);
+            stmt.setInt(1, this.balanca.getIdBalanca());
 
             stmt.executeUpdate();
             stmt.close();
+            con.close();
+
+            //SQL Server
+            Connection conS = new ConnectionFactory().getServer();
+            stmt = conS.prepareStatement(sql);
+
+            stmt.setInt(1, this.balanca.getIdBalanca());
+
+            stmt.executeUpdate();
+            stmt.close();
+            conS.close();
         } catch (SQLException e) {
             throw new RuntimeException(e + "Erro na Conexão");
         }
