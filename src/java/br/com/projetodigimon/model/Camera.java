@@ -12,7 +12,7 @@ package br.com.projetodigimon.model;
 public class Camera {
 
     private int idCamera;
-    private Rodovia rodovia;
+    private int idRodovia;
     private String numSerie;
     private String fabricante;
     private String modelo;
@@ -29,12 +29,12 @@ public class Camera {
         this.idCamera = idCamera;
     }
 
-    public Rodovia getRodovia() {
-        return rodovia;
+    public int getIdRodovia() {
+        return idRodovia;
     }
 
-    public void setRodovia(Rodovia rodovia) {
-        this.rodovia = rodovia;
+    public void setIdRodovia(int idRodovia) {
+        this.idRodovia = idRodovia;
     }
 
     public String getNumSerie() {
@@ -93,6 +93,4 @@ public class Camera {
         this.longitude = longitude;
     }
 
-  
-    
 }

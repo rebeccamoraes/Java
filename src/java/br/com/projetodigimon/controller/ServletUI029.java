@@ -7,13 +7,14 @@ package br.com.projetodigimon.controller;
 
 import br.com.projetodigimon.dao.DaoCarga;
 import br.com.projetodigimon.dao.DaoPessoaFisica;
+import br.com.projetodigimon.dao.DaoPessoaJuridica;
 import br.com.projetodigimon.dao.DaoProduto;
 import br.com.projetodigimon.dao.DaoVeiculo;
 import br.com.projetodigimon.model.Carga;
 import br.com.projetodigimon.model.Frete;
 import br.com.projetodigimon.model.MotoristaPesquisaBean;
 import br.com.projetodigimon.model.PessoaFisica;
-import br.com.projetodigimon.model.PessoaJuridicaPesquisaBean;
+import br.com.projetodigimon.model.PessoaJuridica;
 import br.com.projetodigimon.model.Produto;
 import br.com.projetodigimon.model.TransportadorPesquisaBean;
 import br.com.projetodigimon.model.Veiculo;
@@ -58,9 +59,11 @@ public class ServletUI029 extends HttpServlet {
         DaoVeiculo daoVeiculo = new DaoVeiculo();
         List<Veiculo> listaVeiculo = new ArrayList<Veiculo>();
 
-        //Transportador & pessoa juridica
-        TransportadorPesquisaBean transportador = new TransportadorPesquisaBean();
-        PessoaJuridicaPesquisaBean pessoaj = new PessoaJuridicaPesquisaBean();
+         //Transportador & Pessoa Juridica
+        TransportadorPesquisaBean transportador = new TransportadorPesquisaBean();        // PessoaJuridicaPesquisaBean pessoaj = new PessoaJuridicaPesquisaBean();
+        PessoaJuridica pj = new PessoaJuridica();
+        List<PessoaJuridica> listaPessoaJuridica = new ArrayList<PessoaJuridica>();
+        DaoPessoaJuridica daoPessoaJuridica = new DaoPessoaJuridica();
 
         //Pessoa fisica
         // PessoaFisicaPesquisaBean pessoaf = new PessoaFisicaPesquisaBean();
@@ -93,14 +96,17 @@ public class ServletUI029 extends HttpServlet {
 
             } else if (filtro.equalsIgnoreCase("TRANSPORTADOR")) {
                 transportador.setRntrc(request.getParameter("rntrc"));
-                pessoaj.setCnpj(request.getParameter("cnpj"));
-                pessoaj.setNome(request.getParameter("nome"));  // conferir se é nome fantasia ou nome.
+                pj.setCnpj(request.getParameter("cnpj"));
+                pj.setNomeFantasia(request.getParameter("nomeFantasia"));  // conferir se é nome fantasia ou nome.
                 //inserir dao.listar + try catch
 
             } else if (filtro.equalsIgnoreCase("PESSOA_JURIDICA")) {
-                pessoaj.setCnpj(request.getParameter("cnpj"));
-                pessoaj.setNome(request.getParameter("nome"));
-                //inserir dao.listar + try catch
+                pj.setCnpj(request.getParameter("cnpj"));
+                pj.setNomeFantasia(request.getParameter("nomeFantasia"));
+
+                listaPessoaJuridica = daoPessoaJuridica.listar(pj);
+                request.setAttribute("Pessoasj", listaPessoaJuridica);
+                         //inserir dao.listar + try catch
 
             } else if (filtro.equalsIgnoreCase("PESSOA_FISICA")) {
                 pf.setCpf(request.getParameter("cpf"));

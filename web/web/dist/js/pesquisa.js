@@ -1,43 +1,71 @@
-_$("pesquisaJ").onchange = function x (){
-    pesquisa = _$("pesquisaJ").value;
-   if(pesquisa == "VEICULO"){
-        aparece("formVeiculo");   
+
+   _$("pesquisaJ").onchange = function x (){
+   var pesquisa = _$("pesquisaJ").value;
+   if(pesquisa == "Veiculo"){
+        aparece("formVeiculo");
+        localStorage.setItem('filtro', 'Veiculo');
    }else{
        fechar("formVeiculo");
    }
-   if(pesquisa == "MOTORISTA"){
+   if(pesquisa == "Motorista"){
        aparece("formMotorista");   
+       localStorage.setItem('filtro', 'Motorista');
    }else{
        fechar("formMotorista");
    }
-   if(pesquisa == "TRANSPORTADOR"){
+   if(pesquisa == "Transportador"){
        aparece("formTransportador");   
+       localStorage.setItem('filtro', 'Transportador');
    }else{
        fechar("formTransportador");
    }
-   if(pesquisa == "PESSOA_JURIDICA"){
+   if(pesquisa == "PJ"){
        aparece("formPJ");   
+       localStorage.setItem('filtro', 'PJ');
    }else{
        fechar("formPJ");
    }
-   if(pesquisa == "CARGA"){
+   if(pesquisa == "Carga"){
        aparece("formCarga");   
+       localStorage.setItem('filtro', 'Carga');
    }else{
        fechar("formCarga");
    }
-   if(pesquisa == "PESSOA_FISICA"){
+   if(pesquisa == "PF"){
        aparece("formPF");   
+       localStorage.setItem('filtro', 'PF');
    }else{
        fechar("formPF");
    }
-   if(pesquisa == "PRODUTO"){
+   if(pesquisa == "Produto"){
        aparece("formProduto");   
+       localStorage.setItem('filtro', 'Produto');
    }else{
        fechar("formProduto");
    }
-   if(pesquisa == "FRETE"){
+   if(pesquisa == "Frete"){
        aparece("formFrete");   
+       localStorage.setItem('filtro', 'Frete');
    }else{
        fechar("formFrete");
    }
+   
 }
+
+   window.onload = function pesquisa(){
+    var filtro = localStorage.getItem('filtro');
+    _$("pesquisaJ").value = filtro;
+    aparece("form" + filtro);
+    
+    var _gebt = document.getElementsByTagName("li")
+	
+	for (var i = 1; i < _gebt.length; i++) {
+		_gebt[i].onmousemove = function x(){
+			aparece("darkBox");
+		}
+		
+		_$("menu").onmouseout = function y(){
+			fechar("darkBox");
+		}
+	}
+ }

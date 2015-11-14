@@ -19,10 +19,19 @@ public class ConnectionFactory {
 
         try {
             Class.forName("oracle.jdbc.driver.OracleDriver");
-            return DriverManager.getConnection("jdbc:oracle:thin:@192.168.88.131:1521:forsoft", "system", "123");
+            return DriverManager.getConnection("jdbc:oracle:thin:@10.2.12.37:1521:forsoft", "system", "123");
         } catch (SQLException e) {
             throw new RuntimeException(e + " Erro 666: Miguel ferrou o DNS");
         }
 
+    }
+    
+    public Connection getServer() throws ClassNotFoundException{
+        try{
+            Class.forName("com.microsoft.jdbc.sqlserver.SQLServerDriver");
+            return DriverManager.getConnection("jdbc:sqlserver://10.2.12.132:1433\\FORSOFT;user=system;password=123");            
+        }catch (SQLException e) {
+            throw new RuntimeException(e + "ERRO DOTENETE: Lazyness arrived");
+        }
     }
 }

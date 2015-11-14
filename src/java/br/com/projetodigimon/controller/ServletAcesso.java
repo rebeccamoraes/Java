@@ -43,8 +43,9 @@ public class ServletAcesso extends HttpServlet {
         try {
             DaoAcesso dao = new DaoAcesso();
             us = dao.getUsuario(usuario, senha);
-
+            us.setUsuario(usuario);
         } catch (Exception e) {
+            
         }
 
         if (us == null) {
@@ -53,7 +54,7 @@ public class ServletAcesso extends HttpServlet {
             request.getRequestDispatcher("inicio.jsp").forward(request, response);
         } else {
             session.setAttribute("us", us);
-            //out.println("Usuário " + usuario + "  Logado!");
+            //out.println("Usuário " + us.getUsuario() + "  Logado!");
             
             request.getRequestDispatcher("ui005home.jsp").forward(request, response);
             

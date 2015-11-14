@@ -32,7 +32,7 @@ public class DaoAcesso {
                 String pusuario = rs.getString("usuario");
                 String psenha = rs.getString("senha");         
                 if (usuario.equals(pusuario) && senha.equals(psenha)) {
-                    System.out.println("Usuario Encontrado");
+                    us.setUsuario(pusuario);
                     login = true;
                 } else {
                     System.out.println("Usuario não encontrado");

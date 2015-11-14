@@ -26,31 +26,30 @@
                 <div class="centro">
 
                     <!-- =======================NÃO EDITE ACIMA ====================-->
-
-                    <h2>Fale Conosco</h2>
                     <form action="#" method="post" id="formularioJ">
-                        ------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+                        <fieldset>
+                        <legend>Fale Conosco</legend>
                         <div class="rc">
                             <div class="campo">
                                 <label for="nomeJ">Nome:</label><br> 
-                                <input type="text" size="35" name="nome" id="nomeJ" class="campoObrig iLetras" maxlength="40" ><span id="x_nomeJ" class="tSpan"></span>
+                                <input type="text" size="35" name="nome" id="nomeJ" required class="iLetras" maxlength="40" ><span id="x_nomeJ" class="tSpan"></span>
                             </div><br>
                             <div class="campo"> 
                                 <label for="emailJ">Email:</label><br> 
-                                <input type="text" size="35" name="email" id="emailJ"  class="campoObrig" maxlength="100" ><span id="x_emailJ" class="tSpan"></span>
+                                <input type="text" size="35" name="email" id="emailJ"  required maxlength="100" ><span id="x_emailJ" class="tSpan"></span>
                             </div>
                             <br>
                             <div class="campo">
                                 <label for="assuntoJ">Assunto:</label><br>
-                                <input type="text" name="assunto" id="assuntoJ"  class="campoObrig" maxlength="40"><span id="x_assuntoJ" class="tSpan"></span>
+                                <input type="text" name="assunto" id="assuntoJ"  required maxlength="40"><span id="x_assuntoJ" class="tSpan"></span>
                             </div>
                             <br>
                             <div class="campo">
-                                <textarea name="comentario" placeholder="Insira aqui a sua mensagem..." rows="12" cols="64"  class="campoObrig"></textarea><span id="x_comentarioJ" class="tSpan"></span>
+                                <textarea name="comentario" placeholder="Insira aqui a sua mensagem..." rows="12" cols="64"  required></textarea><span id="x_comentarioJ" class="tSpan"></span>
 
                             </div>
                         </div>				
-                        ----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+                        
                         <div class="botoes" id="botoes">
                             <input type="reset" value="CANCELAR" name="Limpar" id="limparJ" class="botaoJ">
                             <input type="submit" value="ENVIAR" name="enviar" id="enviarJ" class="botaoJ">
