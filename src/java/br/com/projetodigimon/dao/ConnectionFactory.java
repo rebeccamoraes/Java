@@ -29,8 +29,7 @@ public class ConnectionFactory {
     public Connection getServer() throws ClassNotFoundException{
         try{
             Class.forName("com.microsoft.jdbc.sqlserver.SQLServerDriver");
-            return DriverManager.getConnection("jdbc:sqlserver://10.2.12.132:1433\\FORSOFT;user=system;password=123");
-            
+            return DriverManager.getConnection("jdbc:sqlserver://10.2.12.132:1433\\FORSOFT;user=system;password=123");            
         }catch (SQLException e) {
             throw new RuntimeException(e + "ERRO DOTENETE: Lazyness arrived");
         }
