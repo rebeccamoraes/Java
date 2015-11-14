@@ -16,7 +16,7 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <script type="text/javascript" src="dist/js/novo.js" defer=""></script>
     </head>
-    <body class="insideSystem">
+    <body class="insideSystem bemVindo">
         <div id="interface">
             <!-- begin header -->
             <%@ include file="header.jsp" %>  

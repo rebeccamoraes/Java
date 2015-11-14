@@ -14,8 +14,8 @@
         <link rel="stylesheet" type="text/css" href="dist/css/estilo.css">
         <link rel="icon" type="image/png" sizes="32x32" href="dist/imagens/favicon-32x32.png">
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <script type="text/javascript" src="dist/js/novo.js" defer=""></script>
-        <script type="text/javascript" src="dist/js/pesquisa.js" defer=""></script>
+        <script type="text/javascript" src="dist/js/novo.js" defer=" "></script>
+        <script type="text/javascript" src="dist/js/pesquisa.js" defer=" "></script>
     </head>   
     <body class="pesquisa">
         <span id="titlePag">Pesquisa | DigiMon</span>
@@ -31,15 +31,15 @@
                         <div class="campo" id="principal"> 
                             <label for="pesquisaJ">Pesquisar Por</label><br> 
                             <select id="pesquisaJ" name="pesquisa"> 
-                                <option >Selecione</option>
-                                <option value="VEICULO">Veículo</option>
-                                <option value="TRANSPORTADOR">Transportador</option>
-                                <option value="PESSOA_JURIDICA">Pessoa Jurídica</option>
-                                <option selected value="PESSOA_FISICA">Pessoa Física</option>
-                                <option value="MOTORISTA">Motorista</option>
-                                <option value="CARGA">Carga</option>
-                                <option value="PRODUTO">Produto</option>
-                                <option value="FRETE">Frete</option>
+                                <option selected>Selecione</option>
+                                <option value="Veiculo">Veículo</option>
+                                <option value="Transportador">Transportador</option>
+                                <option value="PJ">Pessoa Jurídica</option>
+                                <option value="PF">Pessoa Física</option>
+                                <option value="Motorista">Motorista</option>
+                                <option value="Carga">Carga</option>
+                                <option value="Produto">Produto</option>
+                                <option value="Frete">Frete</option>
                             </select><span id="x_pesquisaJ" class="tSpan"></span>
                         </div>
                         <!--<div class="botoes" id="botoes">
@@ -54,11 +54,6 @@
                         </div>                       
                         <img src="dist/imagens/lupa.png" id="lupa"/>                        
                         <input type="hidden" name="filtro" value="VEICULO">
-
-                        <div class="botoes" id="botoes">
-                            <input type="reset" value="CANCELAR" name="Limpar" id="limparJ" class="botaoJ">
-                            <input type="submit" value="ENVIAR" name="enviar" id="enviarJ" class="botaoJ">
-                        </div>
                         <fieldset>
                             <legend></legend>
                         </fieldset>    
@@ -89,14 +84,10 @@
                             <input type="text" name="nome" id="nomeJ" class="iLetras"><span id="x_nomeJ" class="tSpan"></span>
                         </div>
                         <div class="campo">
-                            <label for="cnhJ">CNH</label><br> 
+                            <label for="cnhJ">CNH</label><br>
                             <input type="text" name="cnh" id="cnhJ" ><span id="x_cnhJ" class="tSpan"></span>
                         </div>                        
                         <input type="hidden" name="filtro" value="MOTORISTA">
-                        <div class="botoes" id="botoes">
-                            <input type="reset" value="CANCELAR" name="Limpar" id="limparJ" class="botaoJ">
-                            <input type="submit" value="ENVIAR" name="enviar" id="enviarJ" class="botaoJ">
-                        </div>
                     </form>
                     <form action="ServletUI029" method="post" id="formTransportador" class="formularioP">
                         <div class="campo">
@@ -112,10 +103,6 @@
                             <input type="text" name="rntrc" id="rntrcJ"><span id="x_rntrcJ" class="tSpan"></span>
                         </div>
                         <input type="hidden" name="filtro" value="TRANSPORTADOR">
-                        <div class="botoes" id="botoes">
-                            <input type="reset" value="CANCELAR" name="Limpar" id="limparJ" class="botaoJ">
-                            <input type="submit" value="ENVIAR" name="enviar" id="enviarJ" class="botaoJ">
-                        </div>
                     </form>
                     <form action="ServletUI029" method="post" id="formPJ" class="formularioP">
                         <div class="campo">
@@ -127,10 +114,6 @@
                             <input type="text" name="nomeFantasia" id="nomeFantasiaJ" class="iLetras"><span id="x_nomeJ" class="tSpan"></span>
                         </div>
                         <input type="hidden" name="filtro" value="PESSOA_JURIDICA">
-                        <div class="botoes" id="botoes">
-                            <input type="reset" value="CANCELAR" name="Limpar" id="limparJ" class="botaoJ">
-                            <input type="submit" value="ENVIAR" name="enviar" id="enviarJ" class="botaoJ">
-                        </div>
                     </form>
                     <form action="ServletUI029" method="post" id="formCarga" class="formularioP">
                         <div class="campo">
@@ -145,12 +128,7 @@
                             <label for="destinatarioJ">Destinatário</label><br> 
                             <input type="text" name="destinatario" id="destinatarioJ"><span id="x_destinatarioJ" class="tSpan"></span>
                         </div>
-                        <input type="hidden" name="filtro" value="CARGA">
-                        <div class="botoes" id="botoes">
-                            <input type="reset" value="CANCELAR" name="Limpar" id="limparJ" class="botaoJ">
-                            <input type="submit" value="ENVIAR" name="enviar" id="enviarJ" class="botaoJ">
-                        </div>
-                        <fieldset>
+                        <input type="hidden" name="filtro" value="CARGA">                        <fieldset>
                             <legend></legend>
                         </fieldset>    
                         <!-- ===== CFOREACH REMOVER ======= -->
@@ -180,10 +158,6 @@
                             <input type="text" name="nome" id="nomeJ"><span id="x_nomeJ" class="tSpan"></span>
                         </div>
                         <input type="hidden" name="filtro" value="PESSOA_FISICA">
-                        <div class="botoes" id="botoes">
-                            <input type="reset" value="CANCELAR" name="Limpar" id="limparJ" class="botaoJ">
-                            <input type="submit" value="ENVIAR" name="enviar" id="enviarJ" class="botaoJ">
-                        </div>
                         <!-- ===== CFOREACH REMOVER ======= -->
                         <table  id="tblConsulta">       
                             <tr>                      
@@ -210,10 +184,6 @@
                             <label for="mercadoriaJ">Mercadoria</label><br> 
                             <input type="text" name="mercadoria" id="mercadoriaJ"><span id="x_mercadoriaJ" class="tSpan"></span>
                         </div>    
-                        <div class="botoes" id="botoes">
-                            <input type="reset" value="CANCELAR" name="Limpar" id="limparJ" class="botaoJ">
-                            <input type="submit" value="ENVIAR" name="enviar" id="enviarJ" class="botaoJ">
-                        </div>
                         <input type="hidden" name="filtro" value="PRODUTO">
                             <legend></legend>
                         </fieldset>    
@@ -247,11 +217,13 @@
                             <input type="text" name="ate" id="ateJ"><span id="x_ateJ" class="tSpan"></span>
                         </div>
                         <input type="hidden" name="filtro" value="FRETE">
-                        <div class="botoes" id="botoes">
+                    </form>
+                    <form action="ServletUI029" method="post" id="formularioJ">
+                       <div class="botoes" id="botoes">
                             <input type="reset" value="CANCELAR" name="Limpar" id="limparJ" class="botaoJ">
                             <input type="submit" value="ENVIAR" name="enviar" id="enviarJ" class="botaoJ">
                         </div>
-                    </form>                    
+                    </form>
 
                     <!-- ===== NÃO EDITE A PARTIR DAQUI =========================================-->
 

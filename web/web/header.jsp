@@ -109,3 +109,5 @@
     </div>
     <div id="darkBox"></div>
 </div>
+<div class="erroForm">
+</div>
