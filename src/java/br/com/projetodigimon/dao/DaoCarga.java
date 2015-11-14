@@ -19,7 +19,7 @@ import java.util.List;
  */
 public class DaoCarga {
 
-    public List<Carga> listar(Carga carga) throws ClassNotFoundException{
+    public List<Carga> listar(Carga carga) throws ClassNotFoundException {
         List<Carga> lista = new ArrayList<Carga>();
         String sql = "SELECT * FROM carga WHERE tipo like ? or remetente like ? or destinatario like ?";
         try {
@@ -34,8 +34,8 @@ public class DaoCarga {
                 carga = new Carga();
                 carga.setTipo(rs.getString("tipo"));
                 carga.setDestinatario(rs.getString("destinatario"));
-                //carga.setOrigem(rs.getString("origem"));         Tipo endereco?
-                //  carga.setDestino(rs.getString("destino"));      Tipo endereco?
+                carga.setIdOrigem(rs.getInt("origem"));
+                carga.setIdDestino(rs.getInt("destino"));
                 carga.setRemetente(rs.getString("remetente"));
                 carga.setSituacao(rs.getString("situacao").charAt(0));
             }

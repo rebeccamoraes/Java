@@ -2,6 +2,21 @@
 <project-private xmlns="http://www.netbeans.org/ns/project-private/1">
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
-        <group/>
+        <group>
+            <file>file:/C:/Users/Higor/Desktop/ForsfotTelas/Java/Java/src/java/br/com/projetodigimon/model/Camera.java</file>
+            <file>file:/C:/Users/Higor/Desktop/ForsfotTelas/Java/Java/src/java/br/com/projetodigimon/dao/ConnectionFactory.java</file>
+            <file>file:/C:/Users/Higor/Desktop/ForsfotTelas/Java/Java/src/java/br/com/projetodigimon/dao/DaoCarga.java</file>
+            <file>file:/C:/Users/Higor/Desktop/ForsfotTelas/Java/Java/src/java/br/com/projetodigimon/dao/DaoPesagem.java</file>
+            <file>file:/C:/Users/Higor/Desktop/ForsfotTelas/Java/Java/src/java/br/com/projetodigimon/model/Carga.java</file>
+            <file>file:/C:/Users/Higor/Desktop/ForsfotTelas/Java/Java/src/java/br/com/projetodigimon/dao/DaoBalanca.java</file>
+            <file>file:/C:/Users/Higor/Desktop/ForsfotTelas/Java/Java/src/java/br/com/projetodigimon/dao/DaoPessoaFisica.java</file>
+            <file>file:/C:/Users/Higor/Desktop/ForsfotTelas/Java/Java/src/java/br/com/projetodigimon/model/PessoaJuridica.java</file>
+            <file>file:/C:/Users/Higor/Desktop/ForsfotTelas/Java/Java/src/java/br/com/projetodigimon/dao/DaoRodovia.java</file>
+            <file>file:/C:/Users/Higor/Desktop/ForsfotTelas/Java/Java/src/java/br/com/projetodigimon/dao/DaoPosto.java</file>
+            <file>file:/C:/Users/Higor/Desktop/ForsfotTelas/Java/Java/src/java/br/com/projetodigimon/dao/DaoPessoaJuridica.java</file>
+            <file>file:/C:/Users/Higor/Desktop/ForsfotTelas/Java/Java/src/java/br/com/projetodigimon/dao/DaoAcesso.java</file>
+            <file>file:/C:/Users/Higor/Desktop/ForsfotTelas/Java/Java/src/java/br/com/projetodigimon/controller/ServletAcesso.java</file>
+            <file>file:/C:/Users/Higor/Desktop/ForsfotTelas/Java/Java/src/java/br/com/projetodigimon/dao/DaoCamera.java</file>
+        </group>
     </open-files>
 </project-private>

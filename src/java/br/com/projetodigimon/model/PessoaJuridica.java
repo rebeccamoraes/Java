@@ -3,8 +3,6 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-
-
 package br.com.projetodigimon.model;
 
 /**
@@ -12,9 +10,10 @@ package br.com.projetodigimon.model;
  * @author Javapos
  */
 public class PessoaJuridica {
+
     private int idPessoaJuridica;
-    private Contato contato;
-    private Endereco endereco;
+    private int idContato;
+    private int idEndereco;
     private String cnpj;
     private String nomeFantasia;
     private String razaoSocial;
@@ -27,20 +26,20 @@ public class PessoaJuridica {
         this.idPessoaJuridica = idPessoaJuridica;
     }
 
-    public Contato getContato() {
-        return contato;
+    public int getIdContato() {
+        return idContato;
     }
 
-    public void setContato(Contato contato) {
-        this.contato = contato;
+    public void setIdContato(int idContato) {
+        this.idContato = idContato;
+    }
+ 
+    public int getIdEndereco() {
+        return idEndereco;
     }
 
-    public Endereco getEndereco() {
-        return endereco;
-    }
-
-    public void setEndereco(Endereco endereco) {
-        this.endereco = endereco;
+    public void setIdEndereco(int idEndereco) {
+        this.idEndereco = idEndereco;
     }
 
     public String getCnpj() {
