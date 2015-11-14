@@ -1,4 +1,5 @@
 package br.com.projetodigimon.dao;
+
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
@@ -30,6 +31,19 @@ public class DaoPosto {
 
             stmt.executeUpdate();
             stmt.close();
+            con.close();
+            //Sql Server
+            Connection conS = new ConnectionFactory().getServer();
+            stmt = conS.prepareStatement(sql);
+
+            stmt.setFloat(1, this.postopesagem.getLatitude());
+            stmt.setFloat(2, this.postopesagem.getLongitude());
+            stmt.setInt(3, this.postopesagem.getKm());
+
+            stmt.executeUpdate();
+            stmt.close();
+            conS.close();
+
         } catch (SQLException e) {
             throw new RuntimeException(e + "Erro na Conexão");
         }
@@ -49,11 +63,24 @@ public class DaoPosto {
             stmt.setInt(1, this.postopesagem.getKm());
             stmt.setFloat(2, this.postopesagem.getLatitude());
             stmt.setFloat(3, this.postopesagem.getLongitude());
-            stmt.setInt(4, 0);
-            stmt.setInt(5, 68);
+            stmt.setInt(4, this.postopesagem.getIdPosto());
 
             stmt.executeUpdate();
             stmt.close();
+            con.close();
+
+            //Sql Server
+            Connection conS = new ConnectionFactory().getServer();
+            stmt = conS.prepareStatement(sql);
+
+            stmt.setInt(1, this.postopesagem.getKm());
+            stmt.setFloat(2, this.postopesagem.getLatitude());
+            stmt.setFloat(3, this.postopesagem.getLongitude());
+            stmt.setInt(4, this.postopesagem.getIdPosto());
+
+            stmt.executeUpdate();
+            stmt.close();
+            conS.close();
 
         } catch (SQLException e) {
             throw new RuntimeException(e + "Erro na Conexão");
@@ -74,6 +101,17 @@ public class DaoPosto {
 
             stmt.executeUpdate();
             stmt.close();
+            con.close();
+
+            //Sql Server
+            Connection conS = new ConnectionFactory().getServer();
+            stmt = conS.prepareStatement(sql);
+
+            stmt.setInt(1, this.postopesagem.getIdPosto());
+
+            stmt.executeUpdate();
+            stmt.close();
+            conS.close();
         } catch (SQLException e) {
             throw new RuntimeException(e + "Erro na Conexão");
         }
