@@ -33,6 +33,8 @@ public class DaoPessoaJuridica {
             while (rs.next()) {
                 pj = new PessoaJuridica();
                 pj.setIdPessoaJuridica(rs.getInt("idpessoajuridica"));
+                pj.setIdEndereco(rs.getInt("idendereco"));
+                pj.setIdContato(rs.getInt("idcontato"));
                 pj.setCnpj(rs.getString("cnpj"));
                 pj.setNomeFantasia(rs.getString("nomefantasia"));
                 pj.setRazaoSocial(rs.getString("razaosocial"));

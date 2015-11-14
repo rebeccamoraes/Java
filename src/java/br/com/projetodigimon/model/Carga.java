@@ -14,8 +14,8 @@ public class Carga {
     private int idCarga;
     private String tipo;
     private Frete frete;
-    private Endereco origem;
-    private Endereco destino;
+    private int idOrigem;
+    private int idDestino;
     private String remetente;
 
     public int getIdCarga() {
@@ -42,20 +42,20 @@ public class Carga {
         this.frete = frete;
     }
 
-    public Endereco getOrigem() {
-        return origem;
+    public int getIdOrigem() {
+        return idOrigem;
     }
 
-    public void setOrigem(Endereco origem) {
-        this.origem = origem;
+    public void setIdOrigem(int idOrigem) {
+        this.idOrigem = idOrigem;
     }
 
-    public Endereco getDestino() {
-        return destino;
+    public int getIdDestino() {
+        return idDestino;
     }
 
-    public void setDestino(Endereco destino) {
-        this.destino = destino;
+    public void setIdDestino(int idDestino) {
+        this.idDestino = idDestino;
     }
 
     public String getRemetente() {
